@@ -15,7 +15,7 @@ export default {
 
   css: ['~assets/sass/app.scss'],
 
-  plugins: [],
+  plugins: ['~plugins/vue-lazyload.js'],
 
   components: true,
 
