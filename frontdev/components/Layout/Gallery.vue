@@ -1,6 +1,6 @@
 <template>
   <section class="section gallery">
-    <div class="gallery__container container">
+    <div class="container">
       <div class="gallery__inner">
         <h2 class="gallery__title title">Галерея</h2>
         <a href="#" class="viewall">Посмотреть все</a>

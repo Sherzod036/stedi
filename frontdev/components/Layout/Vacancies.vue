@@ -1,6 +1,6 @@
 <template>
   <section class="vacancies">
-    <div class="vacancies__container container">
+    <div class="container">
       <div class="vacancies__inner">
         <h2 class="vacancies__title title">Вакансии</h2>
         <a href="#" class="viewall">Посмотреть все</a>

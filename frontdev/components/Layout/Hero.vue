@@ -1,6 +1,6 @@
 <template>
   <section class="section hero">
-    <div class="hero__container container"></div>
+    <div class="container"></div>
   </section>
 </template>
 

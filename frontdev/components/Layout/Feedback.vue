@@ -1,6 +1,6 @@
 <template>
   <section class="section feedback">
-    <div class="feedback__container container">
+    <div class="container">
       <div class="row">
         <div class="col-xl-6">
           <h2 class="feedback__title title">Свяжитесь с нами</h2>

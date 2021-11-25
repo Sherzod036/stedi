@@ -18,7 +18,8 @@ export default {
   plugins: [
     '~plugins/vue-slick-carousel.js',
     '~plugins/v-mask.js',
-    '~plugins/vue-lazyload.js'
+    '~plugins/vue-lazyload.js',
+    '~plugins/vuelidate.js'
   ],
 
   components: true,
