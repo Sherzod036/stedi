@@ -1,4 +1,33 @@
+$primary: #ec1c2c;
+
 @import '~bootstrap/scss/bootstrap-grid.scss';
+
+@font-face {
+  font-family: 'Mazzard';
+  src: url('~assets/fonts/MazzardM-Regular.woff2') format('woff2'),
+    url('~assets/fonts/MazzardM-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mazzard';
+  src: url('~assets/fonts/MazzardM-Medium.woff2') format('woff2'),
+    url('~assets/fonts/MazzardM-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mazzard';
+  src: url('~assets/fonts/MazzardM-SemiBold.woff2') format('woff2'),
+    url('~assets/fonts/MazzardM-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
 
 *,
 *::after,
@@ -9,7 +38,20 @@
 }
 
 body {
+  font-family: 'Mazzard';
+  font-weight: 400;
   font-size: 16px;
+  color: #000;
+  height: 5000px;
+}
+
+body::-webkit-scrollbar {
+  width: 6px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: $primary;
+  outline: none;
 }
 
 span {
@@ -26,6 +68,10 @@ img {
   max-width: 100%;
 }
 
+li {
+  list-style: none;
+}
+
 input,
 button,
 select,
@@ -34,4 +80,269 @@ textarea {
   background: none;
   outline: none;
   resize: none;
+}
+
+.section {
+  margin-bottom: 150px;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 60px;
+}
+
+.viewall {
+  font-weight: 600;
+  font-size: 20px;
+  padding: 7px 17px;
+  border: 1px solid $primary;
+  transition: 0.3s;
+  &:hover {
+    background-color: $primary;
+    color: #fff;
+  }
+}
+
+.header {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99;
+  padding: 15px 0;
+  background-color: #fff;
+  box-shadow: 0 5px 5px rgb(0 0 0 / 5%);
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__logo {
+    flex: 0 0 93px;
+  }
+  &__navigation {
+    & .list {
+      display: flex;
+      &__item {
+        margin-right: 50px;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+      &__link {
+        font-weight: 500;
+        font-size: 18px;
+        transition: 0.3s;
+        position: relative;
+        &::before {
+          content: '';
+          position: absolute;
+          width: 0%;
+          height: 2px;
+          background: $primary;
+          bottom: -5px;
+          transition: 0.3s;
+        }
+        &:hover {
+          color: $primary;
+          &::before {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  &__phone {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 20px;
+    transition: 0.3s;
+    &-icon {
+      width: 45px;
+      height: 45px;
+      background: #ff0000;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 18px;
+      animation: puls 2s infinite;
+    }
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+@keyframes puls {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(236, 28, 44, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(0, 255, 0, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 255, 0, 0);
+  }
+}
+
+.hero {
+  width: 100%;
+  height: 678px;
+  background-image: url('~assets/img/hero_bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.gallery {
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+}
+
+.vacancies {
+  margin-bottom: 105px;
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+}
+
+.vacancy {
+  width: 100%;
+  height: 165px;
+  background-color: #f6f6f6;
+  border-top: 4px solid $primary;
+  padding: 0 22px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 45px;
+  &__title {
+    width: 271px;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 35px;
+    margin-bottom: 20px;
+  }
+  &__link {
+    width: 174px;
+    height: 34px;
+    font-weight: 600;
+    color: #fff;
+    background-color: $primary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $primary;
+    transition: 0.3s;
+    &:hover {
+      color: $primary;
+      background-color: #fff;
+    }
+  }
+}
+
+.feedback {
+  &__title {
+    margin-bottom: 30px;
+  }
+  &__desc {
+    color: #6b6b6b;
+    line-height: 23px;
+    margin-bottom: 25px;
+  }
+  &__form {
+    max-width: 560px;
+  }
+  &__input {
+    font-family: 'Mazzard';
+    font-weight: 500;
+    width: 100%;
+    background: #f6f6f6;
+    padding: 18px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #000;
+    &::placeholder {
+      font-weight: 400;
+      font-size: 16px;
+      color: #bdbdbd;
+    }
+  }
+  &__textarea {
+    font-family: 'Mazzard';
+    font-weight: 500;
+    width: 100%;
+    height: 130px;
+    padding: 18px;
+    background: #f6f6f6;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #000;
+    &::placeholder {
+      font-weight: 400;
+      font-size: 16px;
+      color: #bdbdbd;
+    }
+  }
+  &__button {
+    font-family: 'Mazzard';
+    width: 157px;
+    height: 59px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 158px;
+    color: #fff;
+    background-color: $primary;
+    margin-right: 35px;
+    font-weight: 600;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+    border: 1px solid $primary;
+    &:hover {
+      color: $primary;
+      background-color: #fff;
+    }
+  }
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__bags {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  &__bag {
+    max-width: 497px;
+    position: absolute;
+    top: 17%;
+    &.v2 {
+      left: 21%;
+      z-index: -1;
+      top: 10%;
+    }
+  }
+}
+
+.conf {
+  line-height: 19px;
+  color: #bdbdbd;
+  & a {
+    text-decoration: underline;
+  }
 }

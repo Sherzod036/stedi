@@ -15,7 +15,11 @@ export default {
 
   css: ['~assets/sass/app.scss'],
 
-  plugins: ['~plugins/vue-lazyload.js'],
+  plugins: [
+    '~plugins/vue-slick-carousel.js',
+    '~plugins/v-mask.js',
+    '~plugins/vue-lazyload.js'
+  ],
 
   components: true,
 
