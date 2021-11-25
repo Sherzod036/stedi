@@ -53,7 +53,7 @@ export default {
         },
         {
           title: 'Вакансии',
-          slug: '/vacancy'
+          slug: '/vacancies'
         },
         {
           title: 'Галерея',
