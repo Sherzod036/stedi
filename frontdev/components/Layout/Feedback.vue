@@ -33,7 +33,7 @@
             <textarea class="feedback__textarea" placeholder="Сообщение">
             </textarea>
             <div class="feedback__inner">
-              <button type="button" class="feedback__button">Отправить</button>
+              <button type="submit" class="feedback__button">Отправить</button>
               <span class="conf">
                 Нажимая кнопку “Отправить”, вы соглашаетесь <br />
                 <a href="#">с политикой конфиденциальности</a>

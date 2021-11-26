@@ -26,7 +26,7 @@ export default {
 
   buildModules: ['@nuxtjs/eslint-module'],
 
-  modules: ['@nuxtjs/axios'],
+  modules: ['@nuxtjs/axios', '@nuxtjs/i18n'],
 
   axios: {},
 

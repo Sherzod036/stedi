@@ -2,6 +2,10 @@
   <main class="main">
     <LayoutHero />
 
+    <LayoutAbout />
+
+    <LayoutProducts />
+
     <LayoutBenefits />
 
     <LayoutGallery />

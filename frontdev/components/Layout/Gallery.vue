@@ -28,7 +28,9 @@ export default {
         arrows: true,
         dots: false,
         slidesToShow: 1,
-        draggable: false
+        draggable: false,
+        infinite: false,
+        centerPadding: '40px'
       }
     }
   }
