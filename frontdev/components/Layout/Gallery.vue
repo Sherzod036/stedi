@@ -15,6 +15,9 @@
         <div class="gallery__image">
           <img src="~assets/img/gallery.jpg" alt="" />
         </div>
+        <div class="gallery__image">
+          <img src="~assets/img/gallery.jpg" alt="" />
+        </div>
       </VueSlickCarousel>
     </div>
   </section>
