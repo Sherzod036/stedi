@@ -32,8 +32,7 @@ export default {
         dots: false,
         slidesToShow: 1,
         draggable: false,
-        infinite: false,
-        centerPadding: '40px'
+        infinite: false
       }
     }
   }

@@ -29,6 +29,15 @@ $primary: #ec1c2c;
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Mazzard';
+  src: url('~assets/fonts/MazzardH-Bold.woff2') format('woff2'),
+    url('~assets/fonts/MazzardH-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 *,
 *::after,
 *::before {
@@ -45,6 +54,7 @@ body {
   max-width: 1920px;
   width: 100%;
   margin: 0 auto;
+  overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -205,6 +215,179 @@ textarea {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+.about {
+  margin-bottom: 190px;
+  &__inner {
+    margin-bottom: 50px;
+  }
+  &__desc {
+    line-height: 23px;
+    margin-bottom: 60px;
+    text-align: justify;
+  }
+  &__blocks {
+    margin-bottom: 60px;
+  }
+  &__content {
+    position: relative;
+  }
+  &__icon {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    z-index: -1;
+  }
+  &__infos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__info {
+    &-count {
+      font-weight: 700;
+      font-size: 60px;
+      color: $primary;
+    }
+    &-text {
+      font-weight: 500;
+      font-size: 18px;
+    }
+  }
+  &__video {
+    position: relative;
+    width: 100%;
+    height: 567px;
+    background-image: url('~assets/img/bg/about_bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &::before {
+      content: '';
+      position: absolute;
+      right: -10px;
+      bottom: -10px;
+      z-index: -1;
+      width: 100%;
+      height: 567px;
+      background-color: $primary;
+    }
+    &-icon {
+      width: 157px;
+      height: 157px;
+      background: #ff0000;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 18px;
+      animation: puls 2s infinite;
+      cursor: pointer;
+    }
+  }
+  &__link-id {
+    width: 100%;
+    height: 56px;
+    border: 1px solid $primary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 20px;
+    transition: 0.3s;
+    &:hover {
+      color: #fff;
+      background-color: $primary;
+    }
+  }
+}
+
+.categories {
+  position: relative;
+  &__image {
+    position: absolute;
+    top: -187px;
+    right: 53px;
+  }
+  &__inner {
+    margin-bottom: 50px;
+  }
+
+  & .slick-list {
+    overflow: visible !important;
+  }
+
+  & .slick-slide {
+    width: 260px !important;
+    margin-right: 25px;
+  }
+}
+
+.category {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 369px;
+  overflow: hidden;
+  &__image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28px;
+    color: #fff;
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+    transition: 0.5s;
+  }
+  &__block-hovered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    height: 85%;
+    background-color: $primary;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28px;
+    color: #fff;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+  }
+  &:hover {
+    & .category__block-hovered {
+      opacity: 1;
+      visibility: visible;
+    }
+    & .category__title {
+      opacity: 0;
+      visibility: hidden;
+    }
+    & .category__image {
+      transform: scale(1.1);
+    }
+  }
 }
 
 .benefits {

@@ -4,7 +4,7 @@
 
     <LayoutAbout />
 
-    <LayoutProducts />
+    <LayoutCategories />
 
     <LayoutBenefits />
 
