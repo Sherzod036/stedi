@@ -639,11 +639,6 @@ textarea {
     max-width: 497px;
     position: absolute;
     top: 17%;
-    &.v2 {
-      left: 21%;
-      z-index: -1;
-      top: 10%;
-    }
   }
 }
 
@@ -653,6 +648,10 @@ textarea {
   & a {
     text-decoration: underline;
   }
+}
+
+.contacts {
+  margin-bottom: 70px;
 }
 
 .contact {
@@ -786,3 +785,23 @@ textarea {
     color: #fff;
   }
 }
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  margin-top: 120px;
+  margin-bottom: 50px;
+  &__link {
+    color: #6b6b6b;
+    &.disabled {
+      color: #c4c4c4;
+      pointer-events: none;
+    }
+  }
+}
+
+.slash {
+  margin: 0 10px;
+}
+
+@import 'pages/about';

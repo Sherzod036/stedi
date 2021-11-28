@@ -43,10 +43,7 @@
         </div>
         <div class="col-xl-6">
           <div class="feedback__bags">
-            <span class="feedback__bag v1">
-              <img src="~assets/img/bag.png" alt="" />
-            </span>
-            <span class="feedback__bag v2">
+            <span class="feedback__bag">
               <img src="~assets/img/bag.png" alt="" />
             </span>
           </div>

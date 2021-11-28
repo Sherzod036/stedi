@@ -162,7 +162,7 @@
 
       <div class="copy">
         <p class="copy__text">© 2021 ООО «STEDI». Все права защищены</p>
-        <a href="#" class="space">
+        <a href="https://xspace.uz/" class="space" target="_blank">
           <img src="~assets/img/logos/space.svg" alt="" />
         </a>
       </div>

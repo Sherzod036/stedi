@@ -1,5 +1,5 @@
 <template>
-  <section class="section contacts">
+  <section class="contacts">
     <div class="container">
       <div class="row">
         <div class="col-xl-4">
