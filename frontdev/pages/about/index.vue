@@ -469,6 +469,21 @@ export default {
         arrows: false
       }
     }
+  },
+
+  mounted() {
+    window.addEventListener('scroll', this.sticky)
+  },
+
+  methods: {
+    sticky(event) {
+      const elPosition = document.querySelector('.navbar').offsetHeight
+      const el = document.querySelector('navbar')
+
+      if (window.scrollTop() > elPosition.top) {
+        el.classList.add('sticky')
+      }
+    }
   }
 }
 </script>
