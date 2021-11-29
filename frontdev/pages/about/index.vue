@@ -41,7 +41,7 @@
           <img src="~assets/img/bg/page_about_bg.jpg" alt="" />
         </span>
 
-        <div class="section row">
+        <div class="row">
           <div class="col-xl-2">
             <nav class="navbar">
               <ul class="list">
@@ -70,12 +70,12 @@
             </nav>
           </div>
           <div class="col-xl-10">
-            <div class="page-about__mission page-about__section">
+            <div class="mission page_section">
               <h2 class="page-about__title-colored">
                 <span class="color">Миссия</span>&nbsp;&nbsp;
                 <span>предприятия</span>
               </h2>
-              <p class="page-about__mission-desc">
+              <p class="mission__desc">
                 <span>Стать частью успеха наших клиентов,</span> производя
                 конкурентоспособные и высококачественные продукты с
                 использованием современных технологий с многолетним опытом и
@@ -83,62 +83,371 @@
               </p>
             </div>
 
-            <div class="page-about__values">
+            <div class="values page_section">
               <h2 class="page-about__title-colored">
                 <span class="color">Ценности</span>
               </h2>
 
-              <div class="page-about__values-blocks">
-                <div class="page-about__value ordinary">
-                  <span class="page-about__value-title">
-                    Качество продукции
-                  </span>
-                  <p class="page-about__value-desc">
+              <div class="values__blocks">
+                <div class="value ordinary">
+                  <span class="value__title"> Качество продукции </span>
+                  <p class="value__desc">
                     Мы повышаем качество нашей продукции регулярно,
                     совершенствуя производственные процессы, используя опыт и
                     современные технологии
                   </p>
                 </div>
-                <div class="page-about__value ordinary">
-                  <span class="page-about__value-title">
-                    Качество продукции
-                  </span>
-                  <p class="page-about__value-desc">
+                <div class="value ordinary">
+                  <span class="value__title"> Качество продукции </span>
+                  <p class="value__desc">
                     Мы повышаем качество нашей продукции регулярно,
                     совершенствуя производственные процессы, используя опыт и
                     современные технологии
                   </p>
                 </div>
-                <div class="page-about__value ordinary">
-                  <span class="page-about__value-title">
-                    Качество продукции
-                  </span>
-                  <p class="page-about__value-desc">
+                <div class="value ordinary">
+                  <span class="value__title"> Качество продукции </span>
+                  <p class="value__desc">
                     Мы повышаем качество нашей продукции регулярно,
                     совершенствуя производственные процессы, используя опыт и
                     современные технологии
                   </p>
                 </div>
-                <div class="page-about__value big">
-                  <span class="page-about__value-title">
-                    Качество продукции
-                  </span>
-                  <p class="page-about__value-desc">
-                    Мы повышаем качество нашей продукции регулярно,
-                    совершенствуя производственные процессы, используя опыт и
-                    современные технологии
+                <div class="value big">
+                  <span class="value__title"> Качество продукции </span>
+                  <p class="value__desc">
+                    Мы защищаем природу, производя продукцию высокого качества и
+                    модернизируя производственные процессы. Мы регулярно
+                    обеспечиваем социальную защиту наших сотрудников и членов их
+                    семей
                   </p>
                 </div>
-                <div class="page-about__value big colored">
-                  <span class="page-about__value-title">
-                    Качество продукции
-                  </span>
-                  <p class="page-about__value-desc">
-                    Мы повышаем качество нашей продукции регулярно,
-                    совершенствуя производственные процессы, используя опыт и
-                    современные технологии
+                <div class="value big colored">
+                  <span class="value__title"> Качество продукции </span>
+                  <p class="value__desc">
+                    Наша цель - стать ведущим игроком на рынке
                   </p>
                 </div>
+              </div>
+            </div>
+
+            <div class="strategies page_section">
+              <h2 class="page-about__title-colored">
+                <span class="color">Стратегические цели</span>&nbsp;&nbsp;
+                <span>до 2025 года</span>
+              </h2>
+              <p class="strategies__desc">
+                Предлагать экологическо чистые продукты на местные и зарубежные
+                рынки, производя высокотехнологичные товары и регулярно повышая
+                их качество.
+              </p>
+
+              <div class="strategies__blocks">
+                <div class="strategy">
+                  <span class="strategy__count">01</span>
+                  <p class="strategy__text">
+                    Модернизация действующих производственных процессов
+                  </p>
+                </div>
+                <div class="strategy">
+                  <span class="strategy__count">02</span>
+                  <p class="strategy__text">Инвестиции в науку</p>
+                </div>
+                <div class="strategy">
+                  <span class="strategy__count">03</span>
+                  <p class="strategy__text">
+                    Повысить выплаты и социальное обеспечение сотрудников до
+                    <br />
+                    конкурентоспособного уровня
+                  </p>
+                </div>
+                <div class="strategy">
+                  <span class="strategy__count">04</span>
+                  <p class="strategy__text">Обеспечить охрану природы</p>
+                </div>
+                <div class="strategy">
+                  <span class="strategy__count">05</span>
+                  <p class="strategy__text">
+                    Получение доли рынка в Узбекистане и Центральной Азии
+                  </p>
+                </div>
+                <div class="strategy">
+                  <span class="strategy__count">06</span>
+                  <p class="strategy__text">
+                    Использовать современные и нано технологии в
+                    производственных процессах
+                  </p>
+                </div>
+                <div class="strategy">
+                  <span class="strategy__count">07</span>
+                  <p class="strategy__text">Увеличить выручку компании</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="our-nums page_section">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-2"></div>
+          <div class="col-xl-10">
+            <h2 class="our-nums__title">Наши цифры</h2>
+            <div class="our-nums__blocks">
+              <div class="our-num">
+                <span class="our-num__count">28+</span>
+                <p class="our-num__text">лет на рынке</p>
+              </div>
+              <div class="our-num">
+                <span class="our-num__count">500+</span>
+                <p class="our-num__text">сотрудников</p>
+              </div>
+              <div class="our-num">
+                <span class="our-num__count">10+</span>
+                <p class="our-num__text">тонн ежедневно</p>
+              </div>
+              <div class="our-num">
+                <span class="our-num__count">15+</span>
+                <p class="our-num__text">видов продукции</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="history page_section">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-2"></div>
+          <div class="col-xl-10">
+            <h2 class="page-about__title-colored">
+              <span class="color">История</span>
+            </h2>
+
+            <p class="history__desc">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud
+            </p>
+
+            <div class="history__blocks">
+              <div class="history__block">
+                <span class="history__block-year">1993 г.</span>
+                <span class="history__block-icon">
+                  <svg
+                    width="21"
+                    height="21"
+                    viewBox="0 0 21 21"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect width="21" height="21" rx="10.5" fill="#EC1C2C" />
+                  </svg>
+                </span>
+                <p class="history__block-text">
+                  Наша компания начала свою деятельность под названием «Sabot»
+                  Co
+                </p>
+              </div>
+              <div class="history__block">
+                <span class="history__block-year">2001 г.</span>
+                <span class="history__block-icon">
+                  <svg
+                    width="21"
+                    height="21"
+                    viewBox="0 0 21 21"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect width="21" height="21" rx="10.5" fill="#EC1C2C" />
+                  </svg>
+                </span>
+                <p class="history__block-text">
+                  Название компании изменено на ООО «Стеди»
+                </p>
+              </div>
+              <div class="history__block">
+                <span class="history__block-year">2008 г.</span>
+                <span class="history__block-icon">
+                  <svg
+                    width="21"
+                    height="21"
+                    viewBox="0 0 21 21"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect width="21" height="21" rx="10.5" fill="#EC1C2C" />
+                  </svg>
+                </span>
+                <p class="history__block-text">
+                  Начали производстводить суперконцентрата (masterbatch)
+                </p>
+              </div>
+              <div class="history__block">
+                <span class="history__block-year">2012 г.</span>
+                <span class="history__block-icon">
+                  <svg
+                    width="21"
+                    height="21"
+                    viewBox="0 0 21 21"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect width="21" height="21" rx="10.5" fill="#EC1C2C" />
+                  </svg>
+                </span>
+                <p class="history__block-text">
+                  Получен сертификат ISO 9001: 2009
+                </p>
+              </div>
+              <div class="history__block">
+                <span class="history__block-year">2019 г.</span>
+                <span class="history__block-icon">
+                  <svg
+                    width="21"
+                    height="21"
+                    viewBox="0 0 21 21"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect width="21" height="21" rx="10.5" fill="#EC1C2C" />
+                  </svg>
+                </span>
+                <p class="history__block-text">
+                  Получен сертификат ISO 9001: 2015
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="management page_section">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-2"></div>
+          <div class="col-xl-10">
+            <h2 class="page-about__title-colored">
+              <span class="color">Руководство</span>
+            </h2>
+
+            <VueSlickCarousel v-bind="settings">
+              <div class="management__block">
+                <span class="management__block-image">
+                  <img src="~assets/img/management/v1.jpg" alt="" />
+                </span>
+                <p class="management__block-fullname">
+                  Кахаров Бобирбек <br />
+                  Вохидович
+                </p>
+                <p class="management__block-post">Директор</p>
+              </div>
+              <div class="management__block">
+                <span class="management__block-image">
+                  <img src="~assets/img/management/v1.jpg" alt="" />
+                </span>
+                <p class="management__block-fullname">
+                  Кахаров Бобирбек <br />
+                  Вохидович
+                </p>
+                <p class="management__block-post">Директор</p>
+              </div>
+              <div class="management__block">
+                <span class="management__block-image">
+                  <img src="~assets/img/management/v1.jpg" alt="" />
+                </span>
+                <p class="management__block-fullname">
+                  Кахаров Бобирбек <br />
+                  Вохидович
+                </p>
+                <p class="management__block-post">Директор</p>
+              </div>
+              <div class="management__block">
+                <span class="management__block-image">
+                  <img src="~assets/img/management/v1.jpg" alt="" />
+                </span>
+                <p class="management__block-fullname">
+                  Кахаров Бобирбек <br />
+                  Вохидович
+                </p>
+                <p class="management__block-post">Директор</p>
+              </div>
+              <div class="management__block">
+                <span class="management__block-image">
+                  <img src="~assets/img/management/v1.jpg" alt="" />
+                </span>
+                <p class="management__block-fullname">
+                  Кахаров Бобирбек <br />
+                  Вохидович
+                </p>
+                <p class="management__block-post">Директор</p>
+              </div>
+            </VueSlickCarousel>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="partners page_section">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-2"></div>
+          <div class="col-xl-10">
+            <h2 class="page-about__title-colored">
+              <span class="color">Партнеры</span>
+            </h2>
+            <div class="partners__blocks">
+              <div class="partner">
+                <img src="~assets/img/partners/v1.png" alt="" />
+              </div>
+              <div class="partner">
+                <img src="~assets/img/partners/v2.png" alt="" />
+              </div>
+              <div class="partner">
+                <img src="~assets/img/partners/v3.png" alt="" />
+              </div>
+              <div class="partner">
+                <img src="~assets/img/partners/v4.png" alt="" />
+              </div>
+              <div class="partner">
+                <img src="~assets/img/partners/v5.png" alt="" />
+              </div>
+              <div class="partner">
+                <img src="~assets/img/partners/v6.png" alt="" />
+              </div>
+              <div class="partner">
+                <img src="~assets/img/partners/v7.png" alt="" />
+              </div>
+              <div class="partner">
+                <img src="~assets/img/partners/v8.png" alt="" />
+              </div>
+              <div class="partner">
+                <img src="~assets/img/partners/v9.png" alt="" />
+              </div>
+              <div class="partner">
+                <img src="~assets/img/partners/v10.png" alt="" />
+              </div>
+              <div class="partner">
+                <img src="~assets/img/partners/v11.png" alt="" />
+              </div>
+              <div class="partner">
+                <img src="~assets/img/partners/v12.png" alt="" />
+              </div>
+              <div class="partner">
+                <img src="~assets/img/partners/v13.png" alt="" />
+              </div>
+              <div class="partner">
+                <img src="~assets/img/partners/v14.png" alt="" />
+              </div>
+              <div class="partner">
+                <img src="~assets/img/partners/v15.png" alt="" />
+              </div>
+              <div class="partner">
+                <img src="~assets/img/partners/v15.png" alt="" />
               </div>
             </div>
           </div>
@@ -149,3 +458,17 @@
     <LayoutContacts />
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      settings: {
+        slidesToShow: 4,
+        dots: false,
+        arrows: false
+      }
+    }
+  }
+}
+</script>
