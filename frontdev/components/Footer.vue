@@ -101,7 +101,7 @@
           <a href="#" class="site-map">Карта сайта</a>
         </div>
         <div class="col-xl-4">
-          <a href="#" class="catalog">Скачать каталог продукций</a>
+          <a href="#" class="catalog-link">Скачать каталог продукций</a>
         </div>
         <div class="col-xl-4">
           <div class="subscribe">

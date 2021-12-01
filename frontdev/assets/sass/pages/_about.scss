@@ -41,9 +41,14 @@
 }
 
 .navbar {
-  width: 100%;
-  background: rgba(246, 246, 246, 0.5);
+  &.fixed {
+    position: fixed;
+    top: 100px;
+  }
+  width: 196px;
+  background: #fafafa;
   padding: 10px 20px;
+  transition: 0.3s;
   & .list {
     &__item {
       border-bottom: 1px solid #bdbdbd;

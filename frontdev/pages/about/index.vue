@@ -43,7 +43,7 @@
 
         <div class="row">
           <div class="col-xl-2">
-            <nav class="navbar">
+            <nav class="navbar" :class="{ fixed: isFixed }">
               <ul class="list">
                 <li class="list__item">
                   <a href="#" class="list__link">Миссия</a>
@@ -467,22 +467,24 @@ export default {
         slidesToShow: 4,
         dots: false,
         arrows: false
-      }
+      },
+      isFixed: false,
+      stickyElPos: 0
     }
   },
 
   mounted() {
     window.addEventListener('scroll', this.sticky)
+
+    const offsetEl = document.querySelector('.navbar').offsetTop
+    this.stickyElPos = offsetEl
   },
 
   methods: {
     sticky(event) {
-      const elPosition = document.querySelector('.navbar').offsetHeight
-      const el = document.querySelector('navbar')
-
-      if (window.scrollTop() > elPosition.top) {
-        el.classList.add('sticky')
-      }
+      window.scrollY >= this.stickyElPos + 105
+        ? (this.isFixed = true)
+        : (this.isFixed = false)
     }
   }
 }
