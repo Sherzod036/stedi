@@ -124,6 +124,45 @@
             <a href="#" class="page-vacancy__button">Заполнить анкету</a>
           </div>
         </div>
+        <div class="page-vacancy" data-id="4">
+          <div class="page-vacancy__icon">
+            <span></span>
+            <span></span>
+          </div>
+
+          <span class="page-vacancy__profession">Технолог</span>
+
+          <div class="page-vacancy__content">
+            <span class="page-vacancy__title">Требования:</span>
+            <ul class="list">
+              <li class="list__item">возраст от 30 лет</li>
+              <li class="list__item">
+                опыт работы на производственном предприятии
+              </li>
+              <li class="list__item">без вредных привычек</li>
+            </ul>
+
+            <span class="page-vacancy__title">Объязанности:</span>
+            <ul class="list">
+              <li class="list__item">возраст от 30 лет</li>
+              <li class="list__item">
+                опыт работы на производственном предприятии
+              </li>
+              <li class="list__item">без вредных привычек</li>
+            </ul>
+
+            <span class="page-vacancy__title">Требования:</span>
+            <ul class="list">
+              <li class="list__item">возраст от 30 лет</li>
+              <li class="list__item">
+                опыт работы на производственном предприятии
+              </li>
+              <li class="list__item">без вредных привычек</li>
+            </ul>
+
+            <a href="#" class="page-vacancy__button">Заполнить анкету</a>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -161,7 +200,7 @@ export default {
       const nextEl = e.target.nextElementSibling
 
       this.Hs.map((h, index) => {
-        if (index === id || id) {
+        if (index === id) {
           e.target.classList.add('active')
 
           Array.from(prevEl).map((i) => (i.style.transform = 'rotate(0deg)'))
