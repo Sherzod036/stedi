@@ -5,10 +5,8 @@
 
       <span class="page_title">Вакансии</span>
 
-      <span>{{ Hs }}</span>
-
-      <div class="page-vacancies__block" @click="openHandler">
-        <div id="1" class="page-vacancy">
+      <div class="page-vacancies__block" @click="showHandler">
+        <div class="page-vacancy" data-id="1">
           <div class="page-vacancy__icon">
             <span></span>
             <span></span>
@@ -47,7 +45,7 @@
             <a href="#" class="page-vacancy__button">Заполнить анкету</a>
           </div>
         </div>
-        <div id="2" class="page-vacancy">
+        <div class="page-vacancy" data-id="2">
           <div class="page-vacancy__icon">
             <span></span>
             <span></span>
@@ -87,7 +85,7 @@
             <a href="#" class="page-vacancy__button">Заполнить анкету</a>
           </div>
         </div>
-        <div id="3" class="page-vacancy">
+        <div class="page-vacancy" data-id="3">
           <div class="page-vacancy__icon">
             <span></span>
             <span></span>
@@ -142,24 +140,38 @@ export default {
       Hs: []
     }
   },
+
   mounted() {
-    const vacancy = [...document.querySelectorAll('.page-vacancy')]
+    const vacancy = document.querySelectorAll('.page-vacancy')
 
-    vacancy.map((cv) => this.Hs.push(cv.children[2].offsetHeight))
+    Array.from(vacancy).map((cv) => {
+      this.Hs.push(cv.children[2].offsetHeight)
 
-    vacancy.map((cv) => cv.children[2].classList.add('disabled'))
+      cv.children[2].classList.add('disabled')
+
+      return false
+    })
   },
 
   methods: {
-    openHandler(e) {
-      const id = Number(e.target.parentNode.getAttribute('id')) - 1
+    showHandler(e) {
+      const id = Number(e.target.parentNode.getAttribute('data-id')) - 1
+      const prevEl = e.target.previousElementSibling.children
+
+      const nextEl = e.target.nextElementSibling
 
       this.Hs.map((h, index) => {
-        if (index === id) {
-          e.target.nextElementSibling.classList.remove('disabled')
-          e.target.nextElementSibling.style.height = `${h}px`
+        if (index === id || id) {
+          e.target.classList.add('active')
+
+          Array.from(prevEl).map((i) => (i.style.transform = 'rotate(0deg)'))
+
+          nextEl.style.height = `${h}px`
+
+          nextEl.classList.remove('disabled')
         }
-        return true
+
+        return false
       })
     }
   }

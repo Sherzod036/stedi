@@ -32,6 +32,11 @@
     font-size: 25px;
     color: #000;
     padding: 22px 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    &.active {
+      color: $primary;
+    }
   }
   &__icon {
     position: absolute;
@@ -43,19 +48,26 @@
     right: 20px;
     top: 22px;
     & span {
+      position: absolute;
       width: 25px;
       height: 4px;
       background-color: $primary;
+      transition: 0.3s;
+      &:last-child {
+        transform: rotate(90deg);
+      }
     }
   }
   &__title {
     font-weight: 500;
     font-size: 18px;
     margin-bottom: 5px;
+    padding-left: 20px;
   }
   & .list {
     padding-left: 20px;
     margin-bottom: 45px;
+    margin-left: 20px;
     &__item {
       line-height: 21px;
       list-style: disc;
@@ -68,6 +80,8 @@
     padding: 5px 24px;
     border: 1px solid $primary;
     transition: 0.3s;
+    margin-left: 20px;
+    margin-bottom: 31px;
     &:hover {
       color: $primary;
       background-color: #fff;
