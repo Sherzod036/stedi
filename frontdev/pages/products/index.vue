@@ -3,6 +3,8 @@
     <div class="container">
       <Breadcrumbs />
 
+      <span class="page_title">Полимеры</span>
+
       <div class="page-products__blocks row">
         <div class="col-xl-4">
           <a href="#" class="page-products__product">

@@ -70,3 +70,47 @@
     }
   }
 }
+
+.page-product {
+  &__link-ids {
+    margin-bottom: 120px;
+  }
+  &__link-id {
+    width: 100%;
+    height: 59px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $primary;
+    font-weight: 600;
+    font-size: 20px;
+    color: #fff;
+  }
+  &__block {
+    margin-bottom: 100px;
+    &-title {
+      font-weight: 600;
+      font-size: 40px;
+      color: $primary;
+      margin-bottom: 25px;
+    }
+    &-subtitle {
+      width: 100%;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    &-desc {
+      line-height: 21px;
+      color: #6b6b6b;
+      margin-bottom: 40px;
+    }
+  }
+  & .list {
+    padding-left: 20px;
+    &__item {
+      line-height: 21px;
+      color: #6b6b6b;
+      list-style: disc;
+    }
+  }
+}

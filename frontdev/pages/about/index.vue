@@ -19,7 +19,7 @@
             />
           </svg>
         </span>
-        <h2 class="page-about__title title">О компании</h2>
+        <span class="page_title">О компании</span>
 
         <p class="page-about__desc">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

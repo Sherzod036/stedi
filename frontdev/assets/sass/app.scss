@@ -850,5 +850,12 @@ textarea {
   margin: 0 10px;
 }
 
+.page_title {
+  font-weight: 600;
+  font-size: 60px;
+  margin-bottom: 50px;
+}
+
 @import 'pages/products';
 @import 'pages/about';
+@import 'pages/vacancies';
