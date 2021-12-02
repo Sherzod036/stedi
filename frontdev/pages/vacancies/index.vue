@@ -7,7 +7,7 @@
 
       <span>{{ Hs }}</span>
 
-      <div class="page-vacancies__block" @click.prevent="openHandler">
+      <div class="page-vacancies__block" @click="openHandler">
         <div id="1" class="page-vacancy">
           <div class="page-vacancy__icon">
             <span></span>
@@ -152,17 +152,15 @@ export default {
 
   methods: {
     openHandler(e) {
-      const id = e.target.parentNode.getAttribute('id')
+      const id = Number(e.target.parentNode.getAttribute('id')) - 1
 
-      const choosedEls = e
-
-      console.log(choosedEls)
-
-      for (let i = 0; i < this.Hs.length; i++) {
-        if (this.Hs[i] === Number(id - 1)) {
-          e.target.parentNode.children[2].classList.remove('disabled')
+      this.Hs.map((h, index) => {
+        if (index === id) {
+          e.target.nextElementSibling.classList.remove('disabled')
+          e.target.nextElementSibling.style.height = `${h}px`
         }
-      }
+        return true
+      })
     }
   }
 }
