@@ -13,6 +13,11 @@ export default {
     link: [{ rel: 'icon', type: 'image/png', href: '/fav.png' }]
   },
 
+  loading: {
+    color: '#ec1c2c',
+    height: '5px'
+  },
+
   css: ['~assets/sass/app.scss'],
 
   plugins: [
