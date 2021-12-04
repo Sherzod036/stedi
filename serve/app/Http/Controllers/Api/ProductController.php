@@ -1,13 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Api;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use \App\Http\Resources\VacancyResource;
-use \App\Models\Vacancy;
+use \App\Models\Product;
 
-class VacancyController extends Controller
+class ProductController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,11 +14,11 @@ class VacancyController extends Controller
      */
     public function index()
     {
-        $vacancy = VacancyResource::collection(Vacancy::all());
+        $products = Product::all();
 
         return response()->json([
-            'status' => 'success',
-            'data' => $vacancy,
+            'message' => 'success',
+            'data' => $products,
         ]);
     }
 

@@ -12,6 +12,7 @@ module.exports = {
   plugins: [],
   rules: {
     'no-console': 'off',
-    'comma-dangle': ['error', 'never']
+    'comma-dangle': ['error', 'never'],
+    'vue/no-v-html': 0
   }
 }

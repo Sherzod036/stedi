@@ -65,11 +65,11 @@
     margin-bottom: 5px;
     padding-left: 20px;
   }
-  & .list {
+  & ul {
     padding-left: 20px;
     margin-bottom: 45px;
     margin-left: 20px;
-    &__item {
+    & li {
       line-height: 21px;
       list-style: disc;
     }

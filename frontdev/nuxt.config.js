@@ -33,7 +33,9 @@ export default {
 
   modules: ['@nuxtjs/axios', '@nuxtjs/i18n'],
 
-  axios: {},
+  axios: {
+    baseURL: 'http://127.0.0.1:8000/api'
+  },
 
   build: {}
 }

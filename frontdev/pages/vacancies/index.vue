@@ -6,159 +6,28 @@
       <span class="page_title">Вакансии</span>
 
       <div class="page-vacancies__block" @click="showHandler">
-        <div class="page-vacancy" data-id="1">
+        <div
+          v-for="vacancy in vacancies"
+          :key="vacancy.id"
+          class="page-vacancy"
+          :data-id="vacancy.id"
+        >
           <div class="page-vacancy__icon">
             <span></span>
             <span></span>
           </div>
 
-          <span class="page-vacancy__profession">Технолог</span>
+          <span class="page-vacancy__profession">{{ vacancy.profession }}</span>
 
           <div class="page-vacancy__content">
             <span class="page-vacancy__title">Требования:</span>
-            <ul class="list">
-              <li class="list__item">возраст от 30 лет</li>
-              <li class="list__item">
-                опыт работы на производственном предприятии
-              </li>
-              <li class="list__item">без вредных привычек</li>
-            </ul>
+            <ul v-html="vacancy.requirement"></ul>
 
             <span class="page-vacancy__title">Объязанности:</span>
-            <ul class="list">
-              <li class="list__item">возраст от 30 лет</li>
-              <li class="list__item">
-                опыт работы на производственном предприятии
-              </li>
-              <li class="list__item">без вредных привычек</li>
-            </ul>
+            <ul v-html="vacancy.obligation"></ul>
 
             <span class="page-vacancy__title">Требования:</span>
-            <ul class="list">
-              <li class="list__item">возраст от 30 лет</li>
-              <li class="list__item">
-                опыт работы на производственном предприятии
-              </li>
-              <li class="list__item">без вредных привычек</li>
-            </ul>
-
-            <a href="#" class="page-vacancy__button">Заполнить анкету</a>
-          </div>
-        </div>
-        <div class="page-vacancy" data-id="2">
-          <div class="page-vacancy__icon">
-            <span></span>
-            <span></span>
-          </div>
-
-          <span class="page-vacancy__profession">Технолог</span>
-
-          <div class="page-vacancy__content">
-            <span class="page-vacancy__title">Требования:</span>
-            <ul class="list">
-              <li class="list__item">возраст от 30 лет</li>
-              <li class="list__item">
-                опыт работы на производственном предприятии
-              </li>
-              <li class="list__item">без вредных привычек</li>
-            </ul>
-
-            <span class="page-vacancy__title">Объязанности:</span>
-            <ul class="list">
-              <li class="list__item">возраст от 30 лет</li>
-              <li class="list__item">
-                опыт работы на производственном предприятии
-              </li>
-              <li class="list__item">без вредных привычек</li>
-            </ul>
-
-            <span class="page-vacancy__title">Требования:</span>
-            <ul class="list">
-              <li class="list__item">возраст от 30 лет</li>
-              <li class="list__item">
-                опыт работы на производственном предприятии
-              </li>
-              <li class="list__item">без вредных привычек</li>
-              <li class="list__item">без вредных привычек</li>
-            </ul>
-
-            <a href="#" class="page-vacancy__button">Заполнить анкету</a>
-          </div>
-        </div>
-        <div class="page-vacancy" data-id="3">
-          <div class="page-vacancy__icon">
-            <span></span>
-            <span></span>
-          </div>
-
-          <span class="page-vacancy__profession">Технолог</span>
-
-          <div class="page-vacancy__content">
-            <span class="page-vacancy__title">Требования:</span>
-            <ul class="list">
-              <li class="list__item">возраст от 30 лет</li>
-              <li class="list__item">
-                опыт работы на производственном предприятии
-              </li>
-              <li class="list__item">без вредных привычек</li>
-            </ul>
-
-            <span class="page-vacancy__title">Объязанности:</span>
-            <ul class="list">
-              <li class="list__item">возраст от 30 лет</li>
-              <li class="list__item">
-                опыт работы на производственном предприятии
-              </li>
-              <li class="list__item">без вредных привычек</li>
-            </ul>
-
-            <span class="page-vacancy__title">Требования:</span>
-            <ul class="list">
-              <li class="list__item">возраст от 30 лет</li>
-              <li class="list__item">
-                опыт работы на производственном предприятии
-              </li>
-              <li class="list__item">без вредных привычек</li>
-            </ul>
-
-            <a href="#" class="page-vacancy__button">Заполнить анкету</a>
-          </div>
-        </div>
-        <div class="page-vacancy" data-id="4">
-          <div class="page-vacancy__icon">
-            <span></span>
-            <span></span>
-          </div>
-
-          <span class="page-vacancy__profession">Технолог</span>
-
-          <div class="page-vacancy__content">
-            <span class="page-vacancy__title">Требования:</span>
-            <ul class="list">
-              <li class="list__item">возраст от 30 лет</li>
-              <li class="list__item">
-                опыт работы на производственном предприятии
-              </li>
-              <li class="list__item">без вредных привычек</li>
-            </ul>
-
-            <span class="page-vacancy__title">Объязанности:</span>
-            <ul class="list">
-              <li class="list__item">возраст от 30 лет</li>
-              <li class="list__item">
-                опыт работы на производственном предприятии
-              </li>
-              <li class="list__item">без вредных привычек</li>
-            </ul>
-
-            <span class="page-vacancy__title">Требования:</span>
-            <ul class="list">
-              <li class="list__item">возраст от 30 лет</li>
-              <li class="list__item">
-                опыт работы на производственном предприятии
-              </li>
-              <li class="list__item">без вредных привычек</li>
-            </ul>
+            <ul v-html="vacancy.working_conditions"></ul>
 
             <a href="#" class="page-vacancy__button">Заполнить анкету</a>
           </div>
@@ -174,6 +43,12 @@
 
 <script>
 export default {
+  async asyncData({ $axios }) {
+    const response = await $axios.$get('/vacancies')
+
+    return { vacancies: response.data }
+  },
+
   data() {
     return {
       Hs: []

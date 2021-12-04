@@ -4,10 +4,8 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use \App\Http\Resources\VacancyResource;
-use \App\Models\Vacancy;
 
-class VacancyController extends Controller
+class GalleryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,12 +14,7 @@ class VacancyController extends Controller
      */
     public function index()
     {
-        $vacancy = VacancyResource::collection(Vacancy::all());
-
-        return response()->json([
-            'status' => 'success',
-            'data' => $vacancy,
-        ]);
+        //
     }
 
     /**
