@@ -2,6 +2,9 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use \App\Http\Controllers\Api\CategoryController;
+use \App\Http\Controllers\Api\GalleryController;
+use \App\Http\Controllers\Api\ProductController;
 use \App\Http\Controllers\Api\VacancyController;
 
 /*
@@ -21,4 +24,12 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::apiResources([
     'vacancies' => VacancyController::class,
+
+    'products' => ProductController::class,
+
+    'gallery' => GalleryController::class,
+
+    'categories' => CategoryController::class,
 ]);
+
+Route::get('/categories/{slug}', [CategoryController::class, 'show']);

@@ -49,7 +49,7 @@ export default {
         },
         {
           title: 'Продукты',
-          slug: '/products'
+          slug: '/categories'
         },
         {
           title: 'Вакансии',

@@ -15,7 +15,7 @@ export default {
 
   loading: {
     color: '#ec1c2c',
-    height: '5px'
+    height: '3px'
   },
 
   css: ['~assets/sass/app.scss'],

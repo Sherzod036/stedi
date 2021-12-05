@@ -105,9 +105,9 @@
       margin-bottom: 40px;
     }
   }
-  & .list {
+  & ul {
     padding-left: 20px;
-    &__item {
+    & li {
       line-height: 21px;
       color: #6b6b6b;
       list-style: disc;

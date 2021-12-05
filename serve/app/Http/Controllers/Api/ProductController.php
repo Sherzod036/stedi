@@ -1,8 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use \App\Http\Resources\ProductResource;
 use \App\Models\Product;
 
 class ProductController extends Controller
@@ -14,7 +16,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::all();
+        $products = ProductResource::collection(Product::all());
 
         return response()->json([
             'message' => 'success',
@@ -30,7 +32,20 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $uploaded_file = $request->image_path->store('public/uploads');
+
+        $product = new Product;
+
+        $product->title = $request->title;
+        $product->slug = $request->slug;
+        $product->description = $request->description;
+        $product->usage = $request->usage;
+        $product->usage = $request->usage;
+        $product->chars = $request->chars;
+        $product->image_path = $request->image_path->hashName();
+        $product->category_id = $request->category_id;
+
+        return new ProductResource($product->save());
     }
 
     /**
