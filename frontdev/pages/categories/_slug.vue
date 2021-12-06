@@ -6,19 +6,20 @@
       <span class="page_title">{{ category.title }}</span>
 
       <div class="page-product__link-ids row">
-        <div class="col-xl-2">
-          <a href="#" class="page-product__link-id">Полипропилен</a>
-        </div>
-        <div class="col-xl-2">
-          <a href="#" class="page-product__link-id">Полипропилен</a>
-        </div>
-        <div class="col-xl-2">
-          <a href="#" class="page-product__link-id">Полипропилен</a>
+        <div v-for="link in category.products" :key="link.id" class="col-xl-2">
+          <a
+            href="#"
+            class="page-product__link-id"
+            @click.prevent="scrollHandler(link.id)"
+          >
+            {{ link.title }}
+          </a>
         </div>
       </div>
 
       <div
         v-for="product in category.products"
+        :id="`product_${product.id}`"
         :key="product.id"
         class="page-product__block row"
       >
@@ -58,6 +59,19 @@ export default {
     const response = await $axios.$get(`/categories/${route.params.slug}`)
 
     return { category: response.data }
+  },
+
+  methods: {
+    scrollHandler(id) {
+      const el = document.getElementById(`product_${id}`)
+
+      const posDoc = el.offsetTop - 150
+
+      window.scrollTo({
+        top: posDoc,
+        behavior: 'smooth'
+      })
+    }
   }
 }
 </script>

@@ -17,7 +17,7 @@
           </li>
         </ul>
       </nav>
-      <a href="#" class="header__phone">
+      <a href="tel:+998781290029" class="header__phone">
         (78) 129-00-29
         <span class="header__phone-icon">
           <svg

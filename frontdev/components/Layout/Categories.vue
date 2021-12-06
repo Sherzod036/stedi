@@ -9,64 +9,25 @@
       </div>
 
       <VueSlickCarousel v-bind="settings" class="categories__slider">
-        <a href="#" class="category">
+        <NuxtLink
+          v-for="category in categories"
+          :key="category.id"
+          :to="`/categories/${category.slug}`"
+          class="category"
+        >
           <span class="category__image">
-            <img src="~assets/img/category.jpg" alt="" />
+            <img
+              :src="`http://127.0.0.1:8000/storage/uploads/${category.image_path}`"
+              alt=""
+            />
           </span>
           <div class="category__block-hovered">
-            Полимеры Полимеры гранулированные
+            {{ category.title }}
           </div>
-          <span class="category__title">Суперконцентраты гранулированные</span>
-        </a>
-        <a href="#" class="category">
-          <span class="category__image">
-            <img src="~assets/img/category.jpg" alt="" />
+          <span class="category__title">
+            {{ category.title }}
           </span>
-          <div class="category__block-hovered">Полимеры</div>
-          <span class="category__title">Суперконцентраты гранулированные</span>
-        </a>
-        <a href="#" class="category">
-          <span class="category__image">
-            <img src="~assets/img/category.jpg" alt="" />
-          </span>
-          <div class="category__block-hovered">Полимеры</div>
-          <span class="category__title">Суперконцентраты гранулированные</span>
-        </a>
-        <a href="#" class="category">
-          <span class="category__image">
-            <img src="~assets/img/category.jpg" alt="" />
-          </span>
-          <div class="category__block-hovered">Полимеры</div>
-          <span class="category__title">Суперконцентраты гранулированные</span>
-        </a>
-        <a href="#" class="category">
-          <span class="category__image">
-            <img src="~assets/img/category.jpg" alt="" />
-          </span>
-          <div class="category__block-hovered">Полимеры</div>
-          <span class="category__title">Суперконцентраты гранулированные</span>
-        </a>
-        <a href="#" class="category">
-          <span class="category__image">
-            <img src="~assets/img/category.jpg" alt="" />
-          </span>
-          <div class="category__block-hovered">Полимеры</div>
-          <span class="category__title">Суперконцентраты гранулированные</span>
-        </a>
-        <a href="#" class="category">
-          <span class="category__image">
-            <img src="~assets/img/category.jpg" alt="" />
-          </span>
-          <div class="category__block-hovered">Полимеры</div>
-          <span class="category__title">Суперконцентраты гранулированные</span>
-        </a>
-        <a href="#" class="category">
-          <span class="category__image">
-            <img src="~assets/img/category.jpg" alt="" />
-          </span>
-          <div class="category__block-hovered">Полимеры</div>
-          <span class="category__title">Суперконцентраты гранулированные</span>
-        </a>
+        </NuxtLink>
       </VueSlickCarousel>
     </div>
   </section>
@@ -80,8 +41,16 @@ export default {
         arrows: false,
         dots: false,
         infinite: false
-      }
+      },
+
+      categories: []
     }
+  },
+
+  async fetch() {
+    const response = await this.$axios.$get('/categories')
+
+    this.categories = response.data
   }
 }
 </script>
