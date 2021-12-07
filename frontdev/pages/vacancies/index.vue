@@ -43,8 +43,12 @@
 
 <script>
 export default {
-  async asyncData({ $axios }) {
-    const response = await $axios.$get('/vacancies')
+  async asyncData({ $axios, i18n }) {
+    const config = {
+      headers: { 'X-LOCALE': i18n.locale }
+    }
+
+    const response = await $axios.$get('/vacancies', config)
 
     return { vacancies: response.data }
   },
