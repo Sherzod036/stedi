@@ -4,7 +4,7 @@
 
     <LayoutAbout />
 
-    <LayoutCategories />
+    <LayoutCategories :categories="categories" />
 
     <LayoutBenefits />
 
@@ -19,5 +19,15 @@
 </template>
 
 <script>
-export default {}
+export default {
+  async asyncData({ $axios }) {
+    const config = {
+      headers: { 'X-LOCALE': 3 }
+    }
+
+    const response = await $axios.$get('/categories', config)
+
+    return { categories: response.data }
+  }
+}
 </script>

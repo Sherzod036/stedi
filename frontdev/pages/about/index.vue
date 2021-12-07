@@ -19,7 +19,7 @@
             />
           </svg>
         </span>
-        <span class="page_title">О компании</span>
+        <span class="page_title">{{ $t('about') }}</span>
 
         <p class="page-about__desc">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

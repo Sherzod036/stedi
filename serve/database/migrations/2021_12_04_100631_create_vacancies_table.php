@@ -19,6 +19,7 @@ class CreateVacanciesTable extends Migration
             $table->text('requirement');
             $table->text('obligation');
             $table->text('working_conditions');
+            $table->foreignId('lang_id')->constrained();
             $table->timestamps();
         });
     }

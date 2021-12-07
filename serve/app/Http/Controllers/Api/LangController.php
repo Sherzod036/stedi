@@ -4,25 +4,23 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use \App\Http\Resources\CategoryResource;
-use \App\Models\Category;
+use \App\Http\Resources\LangResource;
+use \App\Models\Lang;
 
-class CategoryController extends Controller
+class LangController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index()
     {
-        $lang_id = $request->header('X-LOCALE');
-
-        $categories = CategoryResource::collection(Category::where('lang_id', $lang_id)->get());
+        $langs = LangResource::collection(Lang::all());
 
         return response()->json([
             'message' => 'success',
-            'data' => $categories,
+            'data' => $langs,
         ]);
     }
 
@@ -34,18 +32,12 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
+        $lang = new Lang;
 
-        $uploaded_file = $request->image_path->store('public/uploads');
+        $lang->title = $request->title;
+        $lang->code = $request->code;
 
-        $category = new Category;
-
-        $category->title = $request->title;
-        $category->slug = $request->slug;
-        $category->image_path = $request->image_path->hashName();
-        $category->lang_id = $request->header('X-LOCALE');
-
-        return new CategoryResource($category->save());
-
+        return new LangResource($lang->save());
     }
 
     /**
@@ -54,11 +46,9 @@ class CategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($slug)
+    public function show($id)
     {
-        $category = Category::where('slug', $slug)->first();
-
-        return new CategoryResource($category);
+        //
     }
 
     /**

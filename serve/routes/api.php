@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\Api\CategoryController;
 use \App\Http\Controllers\Api\GalleryController;
+use \App\Http\Controllers\Api\LangController;
 use \App\Http\Controllers\Api\ProductController;
 use \App\Http\Controllers\Api\VacancyController;
 
@@ -23,6 +24,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::apiResources([
+    'langs' => LangController::class,
+
     'vacancies' => VacancyController::class,
 
     'products' => ProductController::class,

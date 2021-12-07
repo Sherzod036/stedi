@@ -34,6 +34,16 @@
           </svg>
         </span>
       </a>
+
+      <div class="header__lang">
+        <NuxtLink
+          v-for="locale in availableLocales"
+          :key="locale.code"
+          :to="switchLocalePath(locale.code)"
+        >
+          {{ locale.name }}
+        </NuxtLink>
+      </div>
     </div>
   </header>
 </template>
@@ -64,6 +74,11 @@ export default {
           slug: '/contacts'
         }
       ]
+    }
+  },
+  computed: {
+    availableLocales() {
+      return this.$i18n.locales.filter((i) => i.code !== this.$i18n.locale)
     }
   }
 }

@@ -33,6 +33,28 @@ export default {
 
   modules: ['@nuxtjs/axios', '@nuxtjs/i18n'],
 
+  i18n: {
+    locales: [
+      {
+        code: 'ru',
+        name: 'Русский',
+        file: 'ru'
+      },
+      {
+        code: 'uz',
+        name: 'O`zbek',
+        file: 'uz'
+      },
+      {
+        code: 'en',
+        name: 'English',
+        file: 'en'
+      }
+    ],
+    langDir: 'locales/',
+    defaultLocale: 'ru'
+  },
+
   axios: {
     baseURL: 'http://127.0.0.1:8000/api'
   },

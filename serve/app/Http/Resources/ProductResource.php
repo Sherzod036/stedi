@@ -22,7 +22,7 @@ class ProductResource extends JsonResource
             'usage' => $this->usage,
             'chars' => $this->chars,
             'image_path' => $this->image_path,
-            'created_at' => $this->created_at,
+            'created_at' => $this->created_at->format('d.m.Y'),
         ];
     }
 }

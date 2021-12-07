@@ -35,22 +35,24 @@
 
 <script>
 export default {
+  props: {
+    categories: {
+      type: Array,
+      default: () => {
+        return []
+      },
+      required: true
+    }
+  },
+
   data() {
     return {
       settings: {
         arrows: false,
         dots: false,
         infinite: false
-      },
-
-      categories: []
+      }
     }
-  },
-
-  async fetch() {
-    const response = await this.$axios.$get('/categories')
-
-    this.categories = response.data
   }
 }
 </script>

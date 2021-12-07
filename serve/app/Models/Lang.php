@@ -4,17 +4,21 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use \App\Models\Product;
 
-class Category extends Model
+class Lang extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title', 'slug', 'image_path'];
+    protected $fillable = ['title', 'code'];
 
-    public function lang()
+    public function vacancies()
     {
-        return $this->belongsTo(Lang::class);
+        return $this->hasMany(Vacancy::class);
+    }
+
+    public function categories()
+    {
+        return $this->hasMany(Category::class);
     }
 
     public function products()

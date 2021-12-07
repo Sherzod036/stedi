@@ -14,9 +14,11 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $products = ProductResource::collection(Product::all());
+        $lang_id = $request->header('X-LOCALE');
+
+        $products = ProductResource::collection(Product::where('lang_id', $lang_id)->get());
 
         return response()->json([
             'message' => 'success',
@@ -40,10 +42,10 @@ class ProductController extends Controller
         $product->slug = $request->slug;
         $product->description = $request->description;
         $product->usage = $request->usage;
-        $product->usage = $request->usage;
         $product->chars = $request->chars;
         $product->image_path = $request->image_path->hashName();
         $product->category_id = $request->category_id;
+        $product->lang_id = $request->header('X-LOCALE');
 
         return new ProductResource($product->save());
     }
