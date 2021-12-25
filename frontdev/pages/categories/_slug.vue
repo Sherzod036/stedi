@@ -26,7 +26,7 @@
         <div class="col-xl-5">
           <span class="page-product__block-image">
             <img
-              :src="`http://127.0.0.1:8000/storage/uploads/${product.image_path}`"
+              :src="`http://stedi.loc/public/storage/uploads/${product.image_path}`"
               alt=""
             />
           </span>

@@ -18,11 +18,13 @@ class ProductController extends Controller
     {
         $lang_id = $request->header('X-LOCALE');
 
-        $products = ProductResource::collection(Product::where('lang_id', $lang_id)->get());
+        $products = Product::where('lang_id', $lang_id)->get();
+
+        $api_resources = ProductResource::collection($products);
 
         return response()->json([
             'message' => 'success',
-            'data' => $products,
+            'data' => $api_resources,
         ]);
     }
 
@@ -34,7 +36,6 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        $uploaded_file = $request->image_path->store('public/uploads');
 
         $product = new Product;
 
@@ -43,7 +44,6 @@ class ProductController extends Controller
         $product->description = $request->description;
         $product->usage = $request->usage;
         $product->chars = $request->chars;
-        $product->image_path = $request->image_path->hashName();
         $product->category_id = $request->category_id;
         $product->lang_id = $request->header('X-LOCALE');
 

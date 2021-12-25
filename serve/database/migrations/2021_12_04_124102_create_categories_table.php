@@ -18,6 +18,7 @@ class CreateCategoriesTable extends Migration
             $table->string('title');
             $table->string('slug');
             $table->string('image_path');
+            $table->text('icon');
             $table->foreignId('lang_id')->constrained();
             $table->timestamps();
         });

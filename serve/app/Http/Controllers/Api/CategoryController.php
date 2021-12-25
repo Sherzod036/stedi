@@ -18,11 +18,13 @@ class CategoryController extends Controller
     {
         $lang_id = $request->header('X-LOCALE');
 
-        $categories = CategoryResource::collection(Category::where('lang_id', $lang_id)->get());
+        $categories = Category::where('lang_id', $lang_id)->get();
+
+        $api_resources = CategoryResource::collection($categories);
 
         return response()->json([
             'message' => 'success',
-            'data' => $categories,
+            'data' => $api_resources,
         ]);
     }
 
@@ -42,9 +44,10 @@ class CategoryController extends Controller
         $category->title = $request->title;
         $category->slug = $request->slug;
         $category->image_path = $request->image_path->hashName();
+        $category->icon = $request->icon;
         $category->lang_id = $request->header('X-LOCALE');
 
-        return new CategoryResource($category->save());
+        return $category->save();
 
     }
 

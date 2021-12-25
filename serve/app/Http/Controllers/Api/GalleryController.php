@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use \App\Http\Resources\GalleryResource;
+use \App\Models\Gallery;
 
 class GalleryController extends Controller
 {
@@ -14,7 +16,14 @@ class GalleryController extends Controller
      */
     public function index()
     {
-        //
+        $gallery = Gallery::all();
+
+        $api_resources = GalleryResource::collection($gallery);
+
+        return response()->json([
+            'message' => 'success',
+            'data' => $api_resources,
+        ]);
     }
 
     /**
@@ -25,7 +34,13 @@ class GalleryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $uploaded_file = $request->image_path->store('public/uploads');
+
+        $gallery = new Gallery;
+
+        $gallery->image_path = $request->image_path->hashName();
+
+        return new CategoryResource($gallery->save());
     }
 
     /**

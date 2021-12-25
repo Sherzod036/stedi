@@ -37,17 +37,17 @@ export default {
     locales: [
       {
         code: 'ru',
-        name: 'Русский',
+        name: 'Ру',
         file: 'ru'
       },
       {
         code: 'uz',
-        name: 'O`zbek',
+        name: 'O`z',
         file: 'uz'
       },
       {
         code: 'en',
-        name: 'English',
+        name: 'En',
         file: 'en'
       }
     ],
@@ -56,7 +56,8 @@ export default {
   },
 
   axios: {
-    baseURL: 'http://127.0.0.1:8000/api'
+    baseURL: 'http://stedi.loc/api',
+    debug: false
   },
 
   build: {}

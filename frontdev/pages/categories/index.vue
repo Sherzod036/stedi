@@ -1,28 +1,15 @@
 <template>
-  <div class="page-products page">
+  <div class="page-categories page">
     <div class="container">
       <Breadcrumbs />
 
       <span class="page_title">Продукция</span>
 
-      <div class="page-products__blocks row">
+      <div class="row section">
         <div v-for="category in categories" :key="category.id" class="col-xl-4">
-          <NuxtLink
-            :to="`/categories/${category.slug}`"
-            class="page-products__product"
-          >
-            <span class="page-products__product-hovered">
-              {{ category.title }}
-            </span>
-            <span class="page-products__product-image">
-              <img
-                :src="`http://127.0.0.1:8000/storage/uploads/${category.image_path}`"
-                alt=""
-              />
-            </span>
-            <span class="page-products__product-title">
-              {{ category.title }}
-            </span>
+          <NuxtLink :to="`/categories/${category.slug}`" class="category">
+            <span class="category__icon" v-html="category.icon"> </span>
+            <span class="category__title">{{ category.title }}</span>
           </NuxtLink>
         </div>
       </div>
@@ -35,8 +22,30 @@
 
 <script>
 export default {
-  async asyncData({ $axios }) {
-    const response = await $axios.$get('/categories')
+  async asyncData({ $axios, i18n }) {
+    let langId = ''
+
+    switch (i18n.locale) {
+      case 'ru':
+        langId = 1
+        break
+      case 'uz':
+        langId = 2
+        break
+      case 'en':
+        langId = 3
+        break
+      default:
+        break
+    }
+
+    const config = {
+      headers: {
+        'X-LOCALE': langId
+      }
+    }
+
+    const response = await $axios.$get('/categories', config)
 
     return { categories: response.data }
   }

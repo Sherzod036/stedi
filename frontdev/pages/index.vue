@@ -20,9 +20,11 @@
 
 <script>
 export default {
-  async asyncData({ $axios, i18n }) {
+  async asyncData({ $axios }) {
     const config = {
-      headers: { 'X-LOCALE': i18n.locale }
+      headers: {
+        'X-LOCALE': 1
+      }
     }
 
     const response = await $axios.$get('/categories', config)

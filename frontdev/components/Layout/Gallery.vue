@@ -5,7 +5,7 @@
         <h2 class="gallery__title title">Галерея</h2>
         <a href="#" class="viewall">Посмотреть все</a>
       </div>
-      <VueSlickCarousel v-bind="settings">
+      <VueSlickCarousel v-bind="settings" class="gallery-slider">
         <div class="gallery__image">
           <img src="~assets/img/gallery.jpg" alt="" />
         </div>

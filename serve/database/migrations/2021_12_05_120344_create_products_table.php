@@ -20,7 +20,6 @@ class CreateProductsTable extends Migration
             $table->text('description');
             $table->text('usage');
             $table->text('chars');
-            $table->string('image_path');
             $table->foreignId('category_id')->constrained();
             $table->foreignId('lang_id')->constrained();
             $table->timestamps();
