@@ -9,7 +9,11 @@
       </div>
 
       <div class="row">
-        <div v-for="category in categories" :key="category.id" class="col-xl-4">
+        <div
+          v-for="category in categories"
+          :key="category.id"
+          class="col-lg-6 col-xl-4"
+        >
           <NuxtLink :to="`/categories/${category.slug}`" class="category">
             <span class="category__icon" v-html="category.icon"> </span>
             <span class="category__title">{{ category.title }}</span>

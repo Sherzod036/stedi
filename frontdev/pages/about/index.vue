@@ -335,58 +335,56 @@
               <span class="color">Руководство</span>
             </h2>
 
-            <VueSlickCarousel v-bind="settings">
-              <div class="management__block">
-                <span class="management__block-image">
-                  <img src="~assets/img/management/v1.jpg" alt="" />
-                </span>
-                <p class="management__block-fullname">
-                  Кахаров Бобирбек <br />
-                  Вохидович
-                </p>
-                <p class="management__block-post">Директор</p>
+            <div class="row">
+              <div class="col-sm-6 col-md-6 col-lg-3">
+                <div class="management__block">
+                  <span class="management__block-image">
+                    <img src="~assets/img/management/v1.jpg" alt="" />
+                  </span>
+                  <p class="management__block-fullname">
+                    Кахаров Бобирбек <br />
+                    Вохидович
+                  </p>
+                  <p class="management__block-post">Директор</p>
+                </div>
               </div>
-              <div class="management__block">
-                <span class="management__block-image">
-                  <img src="~assets/img/management/v1.jpg" alt="" />
-                </span>
-                <p class="management__block-fullname">
-                  Кахаров Бобирбек <br />
-                  Вохидович
-                </p>
-                <p class="management__block-post">Директор</p>
+              <div class="col-sm-6 col-md-6 col-lg-3">
+                <div class="management__block">
+                  <span class="management__block-image">
+                    <img src="~assets/img/management/v1.jpg" alt="" />
+                  </span>
+                  <p class="management__block-fullname">
+                    Кахаров Бобирбек <br />
+                    Вохидович
+                  </p>
+                  <p class="management__block-post">Директор</p>
+                </div>
               </div>
-              <div class="management__block">
-                <span class="management__block-image">
-                  <img src="~assets/img/management/v1.jpg" alt="" />
-                </span>
-                <p class="management__block-fullname">
-                  Кахаров Бобирбек <br />
-                  Вохидович
-                </p>
-                <p class="management__block-post">Директор</p>
+              <div class="col-sm-6 col-md-6 col-lg-3">
+                <div class="management__block">
+                  <span class="management__block-image">
+                    <img src="~assets/img/management/v1.jpg" alt="" />
+                  </span>
+                  <p class="management__block-fullname">
+                    Кахаров Бобирбек <br />
+                    Вохидович
+                  </p>
+                  <p class="management__block-post">Директор</p>
+                </div>
               </div>
-              <div class="management__block">
-                <span class="management__block-image">
-                  <img src="~assets/img/management/v1.jpg" alt="" />
-                </span>
-                <p class="management__block-fullname">
-                  Кахаров Бобирбек <br />
-                  Вохидович
-                </p>
-                <p class="management__block-post">Директор</p>
+              <div class="col-sm-6 col-md-6 col-lg-3">
+                <div class="management__block">
+                  <span class="management__block-image">
+                    <img src="~assets/img/management/v1.jpg" alt="" />
+                  </span>
+                  <p class="management__block-fullname">
+                    Кахаров Бобирбек <br />
+                    Вохидович
+                  </p>
+                  <p class="management__block-post">Директор</p>
+                </div>
               </div>
-              <div class="management__block">
-                <span class="management__block-image">
-                  <img src="~assets/img/management/v1.jpg" alt="" />
-                </span>
-                <p class="management__block-fullname">
-                  Кахаров Бобирбек <br />
-                  Вохидович
-                </p>
-                <p class="management__block-post">Директор</p>
-              </div>
-            </VueSlickCarousel>
+            </div>
           </div>
         </div>
       </div>
@@ -446,9 +444,6 @@
               <div class="partner">
                 <img src="~assets/img/partners/v15.png" alt="" />
               </div>
-              <div class="partner">
-                <img src="~assets/img/partners/v15.png" alt="" />
-              </div>
             </div>
           </div>
         </div>
@@ -463,11 +458,6 @@
 export default {
   data() {
     return {
-      settings: {
-        slidesToShow: 4,
-        dots: false,
-        arrows: false
-      },
       isFixed: false,
       stickyElPos: 0
     }
@@ -482,7 +472,7 @@ export default {
 
   methods: {
     sticky(event) {
-      window.scrollY >= this.stickyElPos + 105
+      window.scrollY >= this.stickyElPos
         ? (this.isFixed = true)
         : (this.isFixed = false)
     }

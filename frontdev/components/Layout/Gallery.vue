@@ -32,7 +32,7 @@ export default {
         dots: false,
         slidesToShow: 1,
         draggable: false,
-        infinite: false
+        infinite: true
       }
     }
   }

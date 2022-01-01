@@ -94,6 +94,10 @@ textarea {
   resize: none;
 }
 
+.hamburger {
+  display: none;
+}
+
 .section {
   margin-bottom: 150px;
 }
@@ -131,6 +135,14 @@ textarea {
   }
   &__logo {
     flex: 0 0 93px;
+    margin-right: 222px;
+  }
+  &__inner {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
   }
   &__navigation {
     & .list {
@@ -393,7 +405,6 @@ textarea {
   }
   &__desc {
     max-width: 522px;
-    text-align: justify;
     line-height: 23px;
     color: #6b6b6b;
     &.colored {
@@ -427,7 +438,6 @@ textarea {
   line-height: 23px;
   color: #6b6b6b;
   padding: 30px;
-  text-align: justify;
   border: 1px solid #c4c4c4;
   &:first-child,
   &:nth-child(2),
@@ -609,7 +619,6 @@ textarea {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex: 0 0 158px;
     color: #fff;
     background-color: $primary;
     margin-right: 35px;

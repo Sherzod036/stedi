@@ -18,7 +18,10 @@ export default {
     height: '3px'
   },
 
-  css: ['~assets/sass/app.scss'],
+  css: [
+    '~node_modules/hamburgers/dist/hamburgers.css',
+    '~assets/sass/app.scss'
+  ],
 
   plugins: [
     '~plugins/vue-slick-carousel.js',

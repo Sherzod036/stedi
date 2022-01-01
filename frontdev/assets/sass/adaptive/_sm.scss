@@ -1,0 +1,32 @@
+@media (max-width: 576px) {
+  .feedback__inner {
+    flex-direction: column;
+  }
+  .feedback__button {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  .copy {
+    flex-direction: column;
+  }
+  .copy__text {
+    margin-bottom: 15px;
+  }
+  .our-num {
+    width: 100%;
+  }
+  .history__block {
+    flex-direction: column;
+    text-align: center;
+  }
+  .history__block-year {
+    margin-right: 0;
+    flex: unset;
+    margin-bottom: 15px;
+  }
+  .history__block-icon {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}

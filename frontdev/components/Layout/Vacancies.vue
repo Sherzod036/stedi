@@ -9,7 +9,7 @@
         <div
           v-for="(vacancy, index) in vacancies"
           :key="index"
-          class="col-xl-4"
+          class="col-md-6 col-lg-4 col-xl-4"
         >
           <div class="vacancy">
             <span class="vacancy__title">{{ vacancy.title }}</span>

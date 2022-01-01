@@ -2,7 +2,7 @@
   <section class="section feedback">
     <div class="container">
       <div class="row">
-        <div class="col-xl-6">
+        <div class="col-lg-6 col-xl-6">
           <h2 class="feedback__title title">Свяжитесь с нами</h2>
           <p class="feedback__desc">
             Дайте знать, если у вас возникли вопросы.
@@ -41,7 +41,7 @@
             </div>
           </form>
         </div>
-        <div class="col-xl-6">
+        <div class="col-lg-6 col-xl-6">
           <div class="feedback__bags">
             <span class="feedback__bag">
               <img src="~assets/img/bag.png" alt="" />

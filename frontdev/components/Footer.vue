@@ -22,7 +22,7 @@
         <img src="~assets/img/logos/logo_light.svg" alt="" />
       </NuxtLink>
       <div class="footer__navigations row">
-        <div class="col-xl-4">
+        <div class="col-lg-4 col-xl-4">
           <span class="footer__title">Страницы</span>
           <nav class="footer__navigation">
             <ul class="list">
@@ -44,7 +44,7 @@
             </ul>
           </nav>
         </div>
-        <div class="col-xl-4">
+        <div class="col-lg-4 col-xl-4">
           <span class="footer__title">Продукты</span>
           <nav class="footer__navigation">
             <ul class="list">
@@ -74,7 +74,7 @@
             </ul>
           </nav>
         </div>
-        <div class="col-xl-4">
+        <div class="col-lg-4 col-xl-4">
           <span class="footer__title">Контакты</span>
           <div class="footer__inner">
             <span class="footer__inner-title">Адрес:</span>
@@ -97,13 +97,13 @@
       </div>
 
       <div class="row">
-        <div class="col-xl-4">
+        <div class="col-lg-4 col-xl-4">
           <a href="#" class="site-map">Карта сайта</a>
         </div>
-        <div class="col-xl-4">
+        <div class="col-lg-4 col-xl-4">
           <a href="#" class="catalog-link">Скачать каталог продукций</a>
         </div>
-        <div class="col-xl-4">
+        <div class="col-lg-4 col-xl-4">
           <div class="subscribe">
             <span class="subscribe__title">Соц. сети:</span>
             <a href="#" class="subscribe__link">

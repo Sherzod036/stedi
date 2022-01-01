@@ -75,22 +75,22 @@
       </div>
 
       <div class="row">
-        <div class="col-xl-2">
+        <div class="col-md-4 col-lg-3 col-xl-2">
           <a href="#" class="about__link-id">Миссия</a>
         </div>
-        <div class="col-xl-2">
+        <div class="col-md-4 col-lg-3 col-xl-2">
           <a href="#" class="about__link-id">Ценности</a>
         </div>
-        <div class="col-xl-2">
+        <div class="col-md-4 col-lg-3 col-xl-2">
           <a href="#" class="about__link-id">Стратегия</a>
         </div>
-        <div class="col-xl-2">
+        <div class="col-md-4 col-lg-3 col-xl-2">
           <a href="#" class="about__link-id">История</a>
         </div>
-        <div class="col-xl-2">
+        <div class="col-md-4 col-lg-3 col-xl-2">
           <a href="#" class="about__link-id">Руководство</a>
         </div>
-        <div class="col-xl-2">
+        <div class="col-md-4 col-lg-3 col-xl-2">
           <a href="#" class="about__link-id">Партнеры</a>
         </div>
       </div>

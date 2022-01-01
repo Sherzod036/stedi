@@ -1,0 +1,39 @@
+@media (max-width: 768px) {
+  .about__video {
+    height: 400px;
+    &::before {
+      height: 400px;
+    }
+  }
+  .about__video-icon {
+    width: 90px;
+    height: 90px;
+    & svg {
+      width: 30px;
+    }
+  }
+  .gallery__image {
+    height: 400px;
+  }
+  .gallery .slick-arrow {
+    width: 50px;
+    height: 50px;
+  }
+  .contact__link {
+    font-size: 24px;
+  }
+  .value {
+    height: auto;
+  }
+  .value.ordinary {
+    width: 100%;
+    border-right: 1px solid #c4c4c4;
+  }
+  .value.big {
+    width: 100%;
+  }
+  .strategy {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+  }
+}

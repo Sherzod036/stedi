@@ -1,5 +1,39 @@
 @media (max-width: 1200px) {
+  .navbar {
+    display: none;
+  }
+  .header__logo {
+    margin-right: 60px;
+  }
   .header__navigation .list__item {
     margin-right: 25px;
+  }
+  .section,
+  .about,
+  .vacancies,
+  .page_section {
+    margin-bottom: 50px;
+  }
+  .about__inner,
+  .about__desc {
+    margin-bottom: 25px;
+  }
+  .about__infos,
+  .page_title,
+  .page-about__title-colored,
+  .breadcrumbs {
+    margin-bottom: 25px;
+  }
+  .about__link-id {
+    margin-bottom: 25px;
+  }
+  .categories__image {
+    display: none;
+  }
+  .feedback__title {
+    font-size: 50px;
+  }
+  .contact {
+    margin-bottom: 25px;
   }
 }

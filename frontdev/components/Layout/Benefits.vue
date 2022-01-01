@@ -6,13 +6,13 @@
       </div>
 
       <div class="benefits__descs row">
-        <div class="col-xl-6">
+        <div class="col-lg-6 col-xl-6">
           <p class="benefits__desc colored">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt.
           </p>
         </div>
-        <div class="col-xl-6 ordinary">
+        <div class="col-lg-6 col-xl-6 ordinary">
           <p class="benefits__desc">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
