@@ -37,7 +37,7 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
 
-        $uploaded_file = $request->image_path->store('public/uploads');
+        $uploaded_file = $request->image_path->store('uploads', 'public');
 
         $category = new Category;
 

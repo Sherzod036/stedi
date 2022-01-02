@@ -41,13 +41,12 @@ class ProductController extends Controller
 
         $product->title = $request->title;
         $product->slug = $request->slug;
-        $product->description = $request->description;
-        $product->usage = $request->usage;
-        $product->chars = $request->chars;
+        $product->left_block = $request->left_block;
+        $product->right_block = $request->right_block;
         $product->category_id = $request->category_id;
         $product->lang_id = $request->header('X-LOCALE');
 
-        return new ProductResource($product->save());
+        return $product->save();
     }
 
     /**

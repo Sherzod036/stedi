@@ -18,9 +18,8 @@ class ProductResource extends JsonResource
             'id' => $this->id,
             'title' => $this->title,
             'slug' => $this->slug,
-            'description' => $this->description,
-            'usage' => $this->usage,
-            'chars' => $this->chars,
+            'left_block' => $this->left_block,
+            'right_block' => $this->right_block,
             'created_at' => $this->created_at->format('d.m.Y'),
         ];
     }

@@ -5,8 +5,15 @@
 
       <span class="page_title">{{ category.title }}</span>
 
+      <span class="product__image">
+        <img
+          :src="`http://stedi.loc/storage/uploads/${category.image_path}`"
+          alt=""
+        />
+      </span>
+
       <div class="page-product__link-ids row">
-        <div v-for="link in category.products" :key="link.id" class="col-xl-2">
+        <div v-for="link in category.products" :key="link.id" class="col-xl-3">
           <a
             href="#"
             class="page-product__link-id"
@@ -16,31 +23,23 @@
           </a>
         </div>
       </div>
-
       <div
         v-for="product in category.products"
         :id="`product_${product.id}`"
         :key="product.id"
-        class="page-product__block row"
+        class="product"
       >
-        <div class="col-xl-5">
-          <span class="page-product__block-image">
-            <img
-              :src="`http://stedi.loc/public/storage/uploads/${product.image_path}`"
-              alt=""
-            />
-          </span>
-        </div>
-        <div class="col-xl-7">
-          <span class="page-product__block-title">{{ product.title }}</span>
-
-          <span class="page-product__block-subtitle">Описание</span>
-          <p class="page-product__block-desc">{{ product.description }}</p>
-          <span class="page-product__block-subtitle">Область применения</span>
-          <p class="page-product__block-desc">{{ product.usage }}</p>
-
-          <span class="page-product__block-subtitle">Характеристика</span>
-          <ul v-html="product.chars"></ul>
+        <span class="product__title">{{ product.title }}</span>
+        <div class="page-product__block row">
+          <div class="col-lg-6 col-xl-6">
+            <div class="product__left-block" v-html="product.left_block"></div>
+          </div>
+          <div class="col-lg-6 col-xl-6">
+            <div
+              class="product__right-block"
+              v-html="product.right_block"
+            ></div>
+          </div>
         </div>
       </div>
     </div>

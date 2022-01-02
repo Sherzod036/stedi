@@ -26,7 +26,7 @@
             <span class="page-vacancy__title">Объязанности:</span>
             <ul v-html="vacancy.obligation"></ul>
 
-            <span class="page-vacancy__title">Требования:</span>
+            <span class="page-vacancy__title">Условия работы:</span>
             <ul v-html="vacancy.working_conditions"></ul>
 
             <a href="#" class="page-vacancy__button">Заполнить анкету</a>
@@ -44,8 +44,23 @@
 <script>
 export default {
   async asyncData({ $axios, i18n }) {
+    let langId = ''
+    switch (i18n.locale) {
+      case 'ru':
+        langId = 1
+        break
+      case 'uz':
+        langId = 2
+        break
+      case 'en':
+        langId = 3
+        break
+      default:
+        break
+    }
+
     const config = {
-      headers: { 'X-LOCALE': i18n.locale }
+      headers: { 'X-LOCALE': langId }
     }
 
     const response = await $axios.$get('/vacancies', config)

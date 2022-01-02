@@ -398,51 +398,18 @@
             <h2 class="page-about__title-colored">
               <span class="color">Партнеры</span>
             </h2>
-            <div class="partners__blocks">
-              <div class="partner">
-                <img src="~assets/img/partners/v1.png" alt="" />
-              </div>
-              <div class="partner">
-                <img src="~assets/img/partners/v2.png" alt="" />
-              </div>
-              <div class="partner">
-                <img src="~assets/img/partners/v3.png" alt="" />
-              </div>
-              <div class="partner">
-                <img src="~assets/img/partners/v4.png" alt="" />
-              </div>
-              <div class="partner">
-                <img src="~assets/img/partners/v5.png" alt="" />
-              </div>
-              <div class="partner">
-                <img src="~assets/img/partners/v6.png" alt="" />
-              </div>
-              <div class="partner">
-                <img src="~assets/img/partners/v7.png" alt="" />
-              </div>
-              <div class="partner">
-                <img src="~assets/img/partners/v8.png" alt="" />
-              </div>
-              <div class="partner">
-                <img src="~assets/img/partners/v9.png" alt="" />
-              </div>
-              <div class="partner">
-                <img src="~assets/img/partners/v10.png" alt="" />
-              </div>
-              <div class="partner">
-                <img src="~assets/img/partners/v11.png" alt="" />
-              </div>
-              <div class="partner">
-                <img src="~assets/img/partners/v12.png" alt="" />
-              </div>
-              <div class="partner">
-                <img src="~assets/img/partners/v13.png" alt="" />
-              </div>
-              <div class="partner">
-                <img src="~assets/img/partners/v14.png" alt="" />
-              </div>
-              <div class="partner">
-                <img src="~assets/img/partners/v15.png" alt="" />
+            <div class="row partners__blocks">
+              <div
+                v-for="index in 15"
+                :key="index"
+                class="col-sm-6 col-md-4 col-lg-3"
+              >
+                <div class="partner">
+                  <img
+                    :src="require(`~/assets/img/partners/v${index}.png`)"
+                    alt=""
+                  />
+                </div>
               </div>
             </div>
           </div>

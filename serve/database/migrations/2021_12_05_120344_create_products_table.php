@@ -17,9 +17,8 @@ class CreateProductsTable extends Migration
             $table->id();
             $table->string('title');
             $table->string('slug');
-            $table->text('description');
-            $table->text('usage');
-            $table->text('chars');
+            $table->text('left_block');
+            $table->text('right_block');
             $table->foreignId('category_id')->constrained();
             $table->foreignId('lang_id')->constrained();
             $table->timestamps();
