@@ -19,23 +19,9 @@
             />
           </svg>
         </span>
-        <span class="page_title">{{ $t('about') }}</span>
+        <span class="page_title">{{ $t('aboutTitle') }}</span>
 
-        <p class="page-about__desc">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.<br /><br />
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
-          ab illo inventore veritatis et quasi architecto beatae vitae dicta
-          sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-          aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos
-          qui ratione voluptatem sequi nesciunt.
-        </p>
+        <p class="page-about__desc">{{ $t('aboutDesc') }}</p>
 
         <span class="page-about__image">
           <img src="~assets/img/bg/page_about_bg.jpg" alt="" />
@@ -46,25 +32,25 @@
             <nav class="navbar" :class="{ fixed: isFixed }">
               <ul class="list">
                 <li class="list__item">
-                  <a href="#" class="list__link">Миссия</a>
+                  <a href="#" class="list__link">{{ $t('missionTitle') }}</a>
                 </li>
                 <li class="list__item">
-                  <a href="#" class="list__link">Ценности</a>
+                  <a href="#" class="list__link">{{ $t('valuesTitle') }}</a>
                 </li>
                 <li class="list__item">
-                  <a href="#" class="list__link">Стратегия</a>
+                  <a href="#" class="list__link">{{ $t('stra') }}</a>
                 </li>
                 <li class="list__item">
-                  <a href="#" class="list__link">Цифры</a>
+                  <a href="#" class="list__link">{{ $t('ournumbers') }}</a>
                 </li>
                 <li class="list__item">
-                  <a href="#" class="list__link">История</a>
+                  <a href="#" class="list__link">{{ $t('historyTitle') }}</a>
                 </li>
                 <li class="list__item">
-                  <a href="#" class="list__link">Руководство</a>
+                  <a href="#" class="list__link">{{ $t('management') }}</a>
                 </li>
                 <li class="list__item">
-                  <a href="#" class="list__link">Партнеры</a>
+                  <a href="#" class="list__link">{{ $t('partners') }}</a>
                 </li>
               </ul>
             </nav>
@@ -72,115 +58,76 @@
           <div class="col-xl-10">
             <div class="mission page_section">
               <h2 class="page-about__title-colored">
-                <span class="color">Миссия</span>&nbsp;&nbsp;
-                <span>предприятия</span>
+                <span class="color">{{ $t('missionTitle') }}</span>
               </h2>
-              <p class="mission__desc">
-                <span>Стать частью успеха наших клиентов,</span> производя
-                конкурентоспособные и высококачественные продукты с
-                использованием современных технологий с многолетним опытом и
-                достижениями.
-              </p>
+              <p class="mission__desc" v-html="$t('missionDesc')"></p>
             </div>
 
             <div class="values page_section">
               <h2 class="page-about__title-colored">
-                <span class="color">Ценности</span>
+                <span class="color">{{ $t('valuesTitle') }}</span>
               </h2>
 
               <div class="values__blocks">
                 <div class="value ordinary">
-                  <span class="value__title"> Качество продукции </span>
-                  <p class="value__desc">
-                    Мы повышаем качество нашей продукции регулярно,
-                    совершенствуя производственные процессы, используя опыт и
-                    современные технологии
-                  </p>
+                  <span class="value__title">{{ $t('values1Title') }}</span>
+                  <p class="value__desc">{{ $t('values1Desc') }}</p>
                 </div>
                 <div class="value ordinary">
-                  <span class="value__title"> Качество продукции </span>
-                  <p class="value__desc">
-                    Мы повышаем качество нашей продукции регулярно,
-                    совершенствуя производственные процессы, используя опыт и
-                    современные технологии
-                  </p>
+                  <span class="value__title">{{ $t('values2Title') }}</span>
+                  <p class="value__desc">{{ $t('values2Desc') }}</p>
                 </div>
                 <div class="value ordinary">
-                  <span class="value__title"> Качество продукции </span>
-                  <p class="value__desc">
-                    Мы повышаем качество нашей продукции регулярно,
-                    совершенствуя производственные процессы, используя опыт и
-                    современные технологии
-                  </p>
+                  <span class="value__title">{{ $t('values3Title') }}</span>
+                  <p class="value__desc">{{ $t('values3Desc') }}</p>
                 </div>
                 <div class="value big">
-                  <span class="value__title"> Качество продукции </span>
-                  <p class="value__desc">
-                    Мы защищаем природу, производя продукцию высокого качества и
-                    модернизируя производственные процессы. Мы регулярно
-                    обеспечиваем социальную защиту наших сотрудников и членов их
-                    семей
-                  </p>
+                  <span class="value__title">{{ $t('values4Title') }}</span>
+                  <p class="value__desc">{{ $t('values4Desc') }}</p>
                 </div>
                 <div class="value big colored">
-                  <span class="value__title"> Качество продукции </span>
-                  <p class="value__desc">
-                    Наша цель - стать ведущим игроком на рынке
-                  </p>
+                  <span class="value__title">{{ $t('values5Title') }}</span>
+                  <p class="value__desc">{{ $t('values5Desc') }}</p>
                 </div>
               </div>
             </div>
 
             <div class="strategies page_section">
               <h2 class="page-about__title-colored">
-                <span class="color">Стратегические цели</span>&nbsp;&nbsp;
-                <span>до 2025 года</span>
+                <span class="color">{{ $t('strategies1Title') }}</span
+                >&nbsp;&nbsp;
+                <span>{{ $t('strategies2Title') }}</span>
               </h2>
-              <p class="strategies__desc">
-                Предлагать экологическо чистые продукты на местные и зарубежные
-                рынки, производя высокотехнологичные товары и регулярно повышая
-                их качество.
-              </p>
+              <p class="strategies__desc">{{ $t('strategiesDesc') }}</p>
 
               <div class="strategies__blocks">
                 <div class="strategy">
                   <span class="strategy__count">01</span>
-                  <p class="strategy__text">
-                    Модернизация действующих производственных процессов
-                  </p>
+                  <p class="strategy__text">{{ $t('strategies1Text') }}</p>
                 </div>
                 <div class="strategy">
                   <span class="strategy__count">02</span>
-                  <p class="strategy__text">Инвестиции в науку</p>
+                  <p class="strategy__text">{{ $t('strategies2Text') }}</p>
                 </div>
                 <div class="strategy">
                   <span class="strategy__count">03</span>
-                  <p class="strategy__text">
-                    Повысить выплаты и социальное обеспечение сотрудников до
-                    <br />
-                    конкурентоспособного уровня
-                  </p>
+                  <p class="strategy__text">{{ $t('strategies3Text') }}</p>
                 </div>
                 <div class="strategy">
                   <span class="strategy__count">04</span>
-                  <p class="strategy__text">Обеспечить охрану природы</p>
+                  <p class="strategy__text">{{ $t('strategies4Text') }}</p>
                 </div>
                 <div class="strategy">
                   <span class="strategy__count">05</span>
-                  <p class="strategy__text">
-                    Получение доли рынка в Узбекистане и Центральной Азии
-                  </p>
+                  <p class="strategy__text">{{ $t('strategies5Text') }}</p>
                 </div>
                 <div class="strategy">
                   <span class="strategy__count">06</span>
-                  <p class="strategy__text">
-                    Использовать современные и нано технологии в
-                    производственных процессах
-                  </p>
+                  <p class="strategy__text">{{ $t('strategies6Text') }}</p>
                 </div>
                 <div class="strategy">
                   <span class="strategy__count">07</span>
-                  <p class="strategy__text">Увеличить выручку компании</p>
+                  <p class="strategy__text">{{ $t('strategies7Text') }}</p>
                 </div>
               </div>
             </div>
@@ -194,23 +141,23 @@
         <div class="row">
           <div class="col-xl-2"></div>
           <div class="col-xl-10">
-            <h2 class="our-nums__title">Наши цифры</h2>
+            <h2 class="our-nums__title">{{ $t('ournumbers') }}</h2>
             <div class="our-nums__blocks">
               <div class="our-num">
                 <span class="our-num__count">28+</span>
-                <p class="our-num__text">лет на рынке</p>
+                <p class="our-num__text">{{ $t('ournumbersText1') }}</p>
               </div>
               <div class="our-num">
                 <span class="our-num__count">500+</span>
-                <p class="our-num__text">сотрудников</p>
+                <p class="our-num__text">{{ $t('ournumbersText2') }}</p>
               </div>
               <div class="our-num">
                 <span class="our-num__count">10+</span>
-                <p class="our-num__text">тонн ежедневно</p>
+                <p class="our-num__text">{{ $t('ournumbersText3') }}</p>
               </div>
               <div class="our-num">
                 <span class="our-num__count">15+</span>
-                <p class="our-num__text">видов продукции</p>
+                <p class="our-num__text">{{ $t('ournumbersText4') }}</p>
               </div>
             </div>
           </div>
@@ -224,18 +171,33 @@
           <div class="col-xl-2"></div>
           <div class="col-xl-10">
             <h2 class="page-about__title-colored">
-              <span class="color">История</span>
+              <span class="color">{{ $t('historyTitle') }}</span>
             </h2>
 
-            <p class="history__desc">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud
-            </p>
+            <p class="history__desc">{{ $t('historyDesc') }}</p>
 
             <div class="history__blocks">
               <div class="history__block">
-                <span class="history__block-year">1993 г.</span>
+                <span class="history__block-year">
+                  {{ $t('historyYear1') }}
+                </span>
+                <span class="history__block-icon">
+                  <svg
+                    width="21"
+                    height="21"
+                    viewBox="0 0 21 21"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect width="21" height="21" rx="10.5" fill="#EC1C2C" />
+                  </svg>
+                </span>
+                <p class="history__block-text">{{ $t('historyText1') }}</p>
+              </div>
+              <div class="history__block">
+                <span class="history__block-year">{{
+                  $t('historyYear2')
+                }}</span>
                 <span class="history__block-icon">
                   <svg
                     width="21"
@@ -248,12 +210,13 @@
                   </svg>
                 </span>
                 <p class="history__block-text">
-                  Наша компания начала свою деятельность под названием «Sabot»
-                  Co
+                  {{ $t('historyText2') }}
                 </p>
               </div>
               <div class="history__block">
-                <span class="history__block-year">2001 г.</span>
+                <span class="history__block-year">{{
+                  $t('historyYear3')
+                }}</span>
                 <span class="history__block-icon">
                   <svg
                     width="21"
@@ -266,11 +229,13 @@
                   </svg>
                 </span>
                 <p class="history__block-text">
-                  Название компании изменено на ООО «Стеди»
+                  {{ $t('historyText3') }}
                 </p>
               </div>
               <div class="history__block">
-                <span class="history__block-year">2008 г.</span>
+                <span class="history__block-year">{{
+                  $t('historyYear4')
+                }}</span>
                 <span class="history__block-icon">
                   <svg
                     width="21"
@@ -283,11 +248,13 @@
                   </svg>
                 </span>
                 <p class="history__block-text">
-                  Начали производстводить суперконцентрата (masterbatch)
+                  {{ $t('historyText4') }}
                 </p>
               </div>
               <div class="history__block">
-                <span class="history__block-year">2012 г.</span>
+                <span class="history__block-year">{{
+                  $t('historyYear5')
+                }}</span>
                 <span class="history__block-icon">
                   <svg
                     width="21"
@@ -300,24 +267,7 @@
                   </svg>
                 </span>
                 <p class="history__block-text">
-                  Получен сертификат ISO 9001: 2009
-                </p>
-              </div>
-              <div class="history__block">
-                <span class="history__block-year">2019 г.</span>
-                <span class="history__block-icon">
-                  <svg
-                    width="21"
-                    height="21"
-                    viewBox="0 0 21 21"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <rect width="21" height="21" rx="10.5" fill="#EC1C2C" />
-                  </svg>
-                </span>
-                <p class="history__block-text">
-                  Получен сертификат ISO 9001: 2015
+                  {{ $t('historyText5') }}
                 </p>
               </div>
             </div>
@@ -332,7 +282,7 @@
           <div class="col-xl-2"></div>
           <div class="col-xl-10">
             <h2 class="page-about__title-colored">
-              <span class="color">Руководство</span>
+              <span class="color">{{ $t('management') }}</span>
             </h2>
 
             <div class="row">
@@ -396,7 +346,7 @@
           <div class="col-xl-2"></div>
           <div class="col-xl-10">
             <h2 class="page-about__title-colored">
-              <span class="color">Партнеры</span>
+              <span class="color">{{ $t('partners') }}</span>
             </h2>
             <div class="row partners__blocks">
               <div

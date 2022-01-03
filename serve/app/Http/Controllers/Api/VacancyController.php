@@ -32,7 +32,15 @@ class VacancyController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $vacancy = new Vacancy();
+
+        $vacancy->profession = $request->profession;
+        $vacancy->requirement = $request->requirement;
+        $vacancy->obligation = $request->obligation;
+        $vacancy->working_conditions = $request->working_conditions;
+        $vacancy->lang_id = $request->header('X-LOCALE');
+
+        return $vacancy->save();
     }
 
     /**

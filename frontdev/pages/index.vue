@@ -10,7 +10,7 @@
 
     <LayoutGallery />
 
-    <LayoutVacancies />
+    <LayoutVacancies :vacancies="vacancies" />
 
     <LayoutFeedback />
 
@@ -20,16 +20,32 @@
 
 <script>
 export default {
-  async asyncData({ $axios }) {
+  async asyncData({ $axios, i18n }) {
+    let langId = ''
+    switch (i18n.locale) {
+      case 'ru':
+        langId = 1
+        break
+      case 'uz':
+        langId = 2
+        break
+      case 'en':
+        langId = 3
+        break
+      default:
+        break
+    }
+
     const config = {
       headers: {
-        'X-LOCALE': 1
+        'X-LOCALE': langId
       }
     }
 
-    const response = await $axios.$get('/categories', config)
+    const categories = await $axios.$get('/categories', config)
+    const vacancies = await $axios.$get('/vacancies', config)
 
-    return { categories: response.data }
+    return { categories: categories.data, vacancies: vacancies.data }
   }
 }
 </script>
