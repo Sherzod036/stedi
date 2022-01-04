@@ -64,5 +64,6 @@ export default {
   viewAll: 'Посмотреть все',
   heroBlockText: 'Пластик Полимер Сырья',
   address: 'Адресс',
-  subscribe: 'Соц.&nbsp;сети:'
+  subscribe: 'Соц.&nbsp;сети:',
+  pages: 'Страницы'
 }

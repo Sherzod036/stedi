@@ -211,6 +211,60 @@ textarea {
       color: $primary;
     }
   }
+  &__lang {
+    position: relative;
+    &:hover .header__lang-dropdown {
+      opacity: 1;
+      visibility: visible;
+      top: 30px;
+    }
+    &:hover .hicon {
+      transform: rotate(180deg);
+    }
+    &-current {
+      display: flex;
+      align-items: center;
+      text-transform: uppercase;
+      color: #828282;
+      font-weight: 500;
+      font-size: 18px;
+      margin-left: 12px;
+      cursor: pointer;
+    }
+    &-dropdown {
+      position: absolute;
+      top: 50px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      background-color: #fff;
+      width: 71px;
+      padding: 12px 14px;
+      transition: 0.3s;
+      opacity: 0;
+      visibility: hidden;
+    }
+    &-dropdown a {
+      text-transform: uppercase;
+      transition: 0.3s;
+      color: #828282;
+      font-weight: 500;
+      font-size: 18px;
+      &:first-child {
+        margin-bottom: 8px;
+      }
+      &:hover {
+        color: #ec1c2c;
+      }
+    }
+  }
+}
+
+.hicon {
+  display: flex;
+  align-items: center;
+  margin-left: 8px;
+  transition: 0.3s;
 }
 
 @keyframes puls {
@@ -446,9 +500,17 @@ textarea {
   }
 }
 
+.product__right-block,
+.product__left-block p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #6b6b6b;
+  line-height: 20.5px;
+}
+
 .product__right-block div,
 .product__left-block div {
-  margin-bottom: 20px;
+  margin-bottom: 47px;
 }
 
 .benefits {
@@ -548,6 +610,38 @@ textarea {
       object-fit: cover;
     }
   }
+  & .slick-list {
+    overflow: visible !important;
+  }
+  & .slick-arrow {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: $primary;
+    cursor: pointer;
+    position: absolute;
+    z-index: 2;
+    font-size: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 0.3s;
+    &.slick-disabled {
+      opacity: 0.5;
+    }
+  }
+  & .slick-prev {
+    left: 2%;
+    background-image: url('~assets/img/prev.svg');
+  }
+  & .slick-next {
+    right: 4%;
+    background-image: url('~assets/img/next.svg');
+  }
+}
+
+.page-gallery {
   & .slick-list {
     overflow: visible !important;
   }

@@ -23,7 +23,7 @@
       </NuxtLink>
       <div class="footer__navigations row">
         <div class="col-lg-4 col-xl-4">
-          <span class="footer__title">Страницы</span>
+          <span class="footer__title">{{ $t('pages') }}</span>
           <nav class="footer__navigation">
             <ul class="list">
               <li class="list__item">
@@ -55,7 +55,7 @@
           </nav>
         </div>
         <div class="col-lg-4 col-xl-4">
-          <span class="footer__title">Продукты</span>
+          <span class="footer__title">{{ $t('productTitle') }}</span>
           <nav class="footer__navigation">
             <ul class="list">
               <li class="list__item">
@@ -85,9 +85,9 @@
           </nav>
         </div>
         <div class="col-lg-4 col-xl-4">
-          <span class="footer__title">Контакты</span>
+          <span class="footer__title">{{ $t('contactsTitle') }}</span>
           <div class="footer__inner">
-            <span class="footer__inner-title">Адрес:</span>
+            <span class="footer__inner-title">{{ $t('address') }}:</span>
             <a href="#" class="footer__link">
               Узбекистан, г.Ташкент, <br />
               ул.А.Каххара, 9-й пр., дом 1а
@@ -115,7 +115,7 @@
         </div>
         <div class="col-lg-4 col-xl-4">
           <div class="subscribe">
-            <span class="subscribe__title">Соц. сети:</span>
+            <span class="subscribe__title" v-html="$t('subscribe')"></span>
             <a href="#" class="subscribe__link">
               <svg
                 width="23"

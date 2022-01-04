@@ -56,14 +56,14 @@
             </nav>
           </div>
           <div class="col-xl-10">
-            <div class="mission page_section">
+            <div id="mission" class="mission page_section">
               <h2 class="page-about__title-colored">
                 <span class="color">{{ $t('missionTitle') }}</span>
               </h2>
               <p class="mission__desc" v-html="$t('missionDesc')"></p>
             </div>
 
-            <div class="values page_section">
+            <div id="values" class="values page_section">
               <h2 class="page-about__title-colored">
                 <span class="color">{{ $t('valuesTitle') }}</span>
               </h2>
@@ -92,7 +92,7 @@
               </div>
             </div>
 
-            <div class="strategies page_section">
+            <div id="strategies" class="strategies page_section">
               <h2 class="page-about__title-colored">
                 <span class="color">{{ $t('strategies1Title') }}</span
                 >&nbsp;&nbsp;
@@ -165,7 +165,7 @@
       </div>
     </div>
 
-    <div class="history page_section">
+    <div id="history" class="history page_section">
       <div class="container">
         <div class="row">
           <div class="col-xl-2"></div>
@@ -276,7 +276,7 @@
       </div>
     </div>
 
-    <div class="management page_section">
+    <div id="management" class="management page_section">
       <div class="container">
         <div class="row">
           <div class="col-xl-2"></div>
@@ -340,7 +340,7 @@
       </div>
     </div>
 
-    <div class="partners page_section">
+    <div id="partners" class="partners page_section">
       <div class="container">
         <div class="row">
           <div class="col-xl-2"></div>
@@ -378,21 +378,21 @@ export default {
       isFixed: false,
       stickyElPos: 0
     }
-  },
-
-  mounted() {
-    window.addEventListener('scroll', this.sticky)
-
-    const offsetEl = document.querySelector('.navbar').offsetTop
-    this.stickyElPos = offsetEl
-  },
-
-  methods: {
-    sticky(event) {
-      window.scrollY >= this.stickyElPos
-        ? (this.isFixed = true)
-        : (this.isFixed = false)
-    }
   }
+
+  // mounted() {
+  //   window.addEventListener('scroll', this.sticky)
+
+  //   const offsetEl = document.querySelector('.navbar').offsetTop
+  //   this.stickyElPos = offsetEl
+  // },
+
+  // methods: {
+  //   sticky(event) {
+  //     window.scrollY >= this.stickyElPos
+  //       ? (this.isFixed = true)
+  //       : (this.isFixed = false)
+  //   }
+  // }
 }
 </script>

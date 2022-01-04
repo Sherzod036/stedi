@@ -68,5 +68,6 @@ export default {
   viewAll: 'Hammasini ko`rish',
   heroBlockText: 'Plastik Polimer Xomashyo',
   address: 'Manzil',
-  subscribe: 'Ij.&nbsp;tarmoq:'
+  subscribe: 'Ij.&nbsp;tarmoq:',
+  pages: 'Sahifalar'
 }

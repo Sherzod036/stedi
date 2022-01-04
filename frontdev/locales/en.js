@@ -64,5 +64,6 @@ export default {
   viewAll: 'View all',
   heroBlockText: 'Plastic Polymer Raw Materials',
   address: 'Address',
-  subscribe: 'Soc.nbsp;net:'
+  subscribe: 'Soc.nbsp;net:',
+  pages: 'Pages'
 }

@@ -53,16 +53,39 @@
           </span>
         </a>
         <div class="header__lang">
-          <NuxtLink
-            v-for="locale in availableLocales"
-            :key="locale.code"
-            :to="switchLocalePath(locale.code)"
-          >
-            {{ locale.name }}
-          </NuxtLink>
+          <span class="header__lang-current">
+            {{ $i18n.locale }}
+            <span class="hicon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="11"
+                height="6"
+                viewBox="0 0 11 6"
+                fill="none"
+              >
+                <path
+                  d="M6.04456 5.78413L10.7742 1.25827C11.0753 0.970375 11.0753 0.503596 10.7742 0.215837C10.4735 -0.0719457 9.98569 -0.0719457 9.68496 0.215837L5.49992 4.22052L1.31502 0.215953C1.01415 -0.0718292 0.526408 -0.0718292 0.225655 0.215953C-0.0752185 0.503736 -0.0752185 0.970491 0.225655 1.25839L4.95541 5.78424C5.10586 5.92814 5.30283 6 5.4999 6C5.69706 6 5.89418 5.928 6.04456 5.78413Z"
+                  fill="#828282"
+                />
+              </svg>
+            </span>
+          </span>
+          <div class="header__lang-dropdown">
+            <NuxtLink
+              v-for="locale in availableLocales"
+              :key="locale.code"
+              :to="switchLocalePath(locale.code)"
+            >
+              {{ locale.code }}
+            </NuxtLink>
+          </div>
         </div>
       </div>
     </div>
+
+    <!-- test -->
+
+    <!-- /test -->
   </header>
 </template>
 
@@ -70,29 +93,6 @@
 export default {
   data() {
     return {
-      navigation: [
-        {
-          title: 'О компании',
-          slug: '/about'
-        },
-        {
-          title: 'Продукты',
-          slug: '/categories'
-        },
-        {
-          title: 'Вакансии',
-          slug: '/vacancies'
-        },
-        {
-          title: 'Галерея',
-          slug: '/gallery'
-        },
-        {
-          title: 'Контакты',
-          slug: '/contacts'
-        }
-      ],
-
       isHamb: true
     }
   },

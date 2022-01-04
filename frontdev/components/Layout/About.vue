@@ -62,22 +62,40 @@
 
       <div class="row">
         <div class="col-md-4 col-lg-3 col-xl-2">
-          <a href="#" class="about__link-id">Миссия</a>
+          <NuxtLink :to="localePath('/about#mission')" class="about__link-id">
+            {{ $t('missionTitle') }}
+          </NuxtLink>
         </div>
         <div class="col-md-4 col-lg-3 col-xl-2">
-          <a href="#" class="about__link-id">Ценности</a>
+          <NuxtLink :to="localePath('/about#values')" class="about__link-id">
+            {{ $t('valuesTitle') }}
+          </NuxtLink>
         </div>
         <div class="col-md-4 col-lg-3 col-xl-2">
-          <a href="#" class="about__link-id">Стратегия</a>
+          <NuxtLink
+            :to="localePath('/about#strategies')"
+            class="about__link-id"
+          >
+            {{ $t('stra') }}
+          </NuxtLink>
         </div>
         <div class="col-md-4 col-lg-3 col-xl-2">
-          <a href="#" class="about__link-id">История</a>
+          <NuxtLink :to="localePath('/about#history')" class="about__link-id">
+            {{ $t('historyTitle') }}
+          </NuxtLink>
         </div>
         <div class="col-md-4 col-lg-3 col-xl-2">
-          <a href="#" class="about__link-id">Руководство</a>
+          <NuxtLink
+            :to="localePath('/about#management')"
+            class="about__link-id"
+          >
+            {{ $t('management') }}
+          </NuxtLink>
         </div>
         <div class="col-md-4 col-lg-3 col-xl-2">
-          <a href="#" class="about__link-id">Партнеры</a>
+          <NuxtLink :to="localePath('/about#partners')" class="about__link-id">
+            {{ $t('partners') }}
+          </NuxtLink>
         </div>
       </div>
     </div>
