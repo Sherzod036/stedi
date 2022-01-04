@@ -3,10 +3,14 @@
     <div class="container">
       <Breadcrumbs />
 
-      <span class="page_title">Продукция</span>
+      <span class="page_title">{{ $t('productTitle') }}</span>
 
       <div class="row section">
-        <div v-for="category in categories" :key="category.id" class="col-xl-4">
+        <div
+          v-for="category in categories"
+          :key="category.id"
+          class="col-md-6 col-lg-4"
+        >
           <NuxtLink :to="`/categories/${category.slug}`" class="category">
             <span class="category__icon" v-html="category.icon"> </span>
             <span class="category__title">{{ category.title }}</span>

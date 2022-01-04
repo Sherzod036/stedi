@@ -2,8 +2,8 @@
   <section class="vacancies">
     <div class="container">
       <div class="vacancies__inner">
-        <h2 class="vacancies__title title">Вакансии</h2>
-        <NuxtLink to="/vacancies" class="viewall">Посмотреть все</NuxtLink>
+        <h2 class="vacancies__title title">{{ $t('vacanciesTitle') }}</h2>
+        <NuxtLink to="/vacancies" class="viewall">{{ $t('viewAll') }}</NuxtLink>
       </div>
       <div class="row">
         <div

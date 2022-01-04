@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col-sm-6 col-md-6 col-lg-6 col-xl-4">
           <div class="contact">
-            <span class="contact__title">Адрес:</span>
+            <span class="contact__title">{{ $t('address') }}:</span>
             <a href="#" class="contact__link">
               Узбекистан, г.Ташкент, ул.А.Каххара, 9-й пр., дом 1а
             </a>
@@ -12,14 +12,14 @@
         </div>
         <div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
           <div class="contact">
-            <span class="contact__title">Контакты:</span>
+            <span class="contact__title">{{ $t('contactsTitle') }}:</span>
             <a href="#" class="contact__link">(78) 129-00-29</a><br />
             <a href="#" class="contact__link">info@stedi.uz</a>
           </div>
         </div>
         <div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
           <div class="contact">
-            <span class="contact__title">Соц.&nbsp;сети:</span>
+            <span class="contact__title" v-html="$t('subscribe')"></span>
             <a href="#" class="contact__link">Telegram</a><br />
             <a href="#" class="contact__link">Instagram</a><br />
             <a href="#" class="contact__link">Facebook</a><br />

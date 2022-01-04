@@ -2,8 +2,10 @@
   <section class="section gallery">
     <div class="container">
       <div class="gallery__inner">
-        <h2 class="gallery__title title">Галерея</h2>
-        <a href="#" class="viewall">Посмотреть все</a>
+        <h2 class="gallery__title title">{{ $t('galleryTitle') }}</h2>
+        <NuxtLink :to="localePath('/gallery')" class="viewall">
+          {{ $t('viewAll') }}
+        </NuxtLink>
       </div>
       <VueSlickCarousel v-bind="settings" class="gallery-slider">
         <div class="gallery__image">

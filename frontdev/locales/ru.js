@@ -53,5 +53,16 @@ export default {
   ournumbersText4: 'видов продукции',
   management: 'Руководство',
   partners: 'Партенеры',
-  stra: 'Стратегия'
+  stra: 'Стратегия',
+  productTitle: 'Продукция',
+  vacanciesTitle: 'Вакансии',
+  galleryTitle: 'Галерея',
+  contactsTitle: 'Контакты',
+  catalogTitle: 'Наш Каталог и прайс-лист',
+  catalogDesc:
+    'По текущим ссылкам Вы можете ознакомиться с каталогом нашей продукции и прейскурантом.',
+  viewAll: 'Посмотреть все',
+  heroBlockText: 'Пластик Полимер Сырья',
+  address: 'Адресс',
+  subscribe: 'Соц.&nbsp;сети:'
 }

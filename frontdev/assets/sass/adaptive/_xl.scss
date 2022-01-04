@@ -8,10 +8,14 @@
   .header__navigation .list__item {
     margin-right: 25px;
   }
+  .booklet {
+    display: none;
+  }
   .section,
   .about,
   .vacancies,
-  .page_section {
+  .page_section,
+  .catalog {
     margin-bottom: 50px;
   }
   .about__inner,

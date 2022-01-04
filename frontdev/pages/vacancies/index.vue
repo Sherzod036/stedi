@@ -3,7 +3,7 @@
     <div class="container">
       <Breadcrumbs />
 
-      <span class="page_title">Вакансии</span>
+      <span class="page_title">{{ $t('vacanciesTitle') }}</span>
 
       <div class="page-vacancies__block" @click="showHandler">
         <div

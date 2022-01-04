@@ -18,7 +18,7 @@
       </svg>
     </span>
     <div class="footer__container container">
-      <NuxtLink to="/" class="footer__logo">
+      <NuxtLink :to="localePath('/')" class="footer__logo">
         <img src="~assets/img/logos/logo_light.svg" alt="" />
       </NuxtLink>
       <div class="footer__navigations row">
@@ -27,19 +27,29 @@
           <nav class="footer__navigation">
             <ul class="list">
               <li class="list__item">
-                <a href="#" class="list__link">О компании</a>
+                <NuxtLink :to="localePath('/about')" class="list__link">
+                  {{ $t('aboutTitle') }}
+                </NuxtLink>
               </li>
               <li class="list__item">
-                <a href="#" class="list__link">Продукты</a>
+                <NuxtLink :to="localePath('/categories')" class="list__link">
+                  {{ $t('productTitle') }}
+                </NuxtLink>
               </li>
               <li class="list__item">
-                <a href="#" class="list__link">Вакансии</a>
+                <NuxtLink :to="localePath('/vacancies')" class="list__link">
+                  {{ $t('vacanciesTitle') }}
+                </NuxtLink>
               </li>
               <li class="list__item">
-                <a href="#" class="list__link">Галерея</a>
+                <NuxtLink :to="localePath('/gallery')" class="list__link">
+                  {{ $t('galleryTitle') }}
+                </NuxtLink>
               </li>
               <li class="list__item">
-                <a href="#" class="list__link">Контакты</a>
+                <NuxtLink :to="localePath('/contacts')" class="list__link">
+                  {{ $t('contactsTitle') }}
+                </NuxtLink>
               </li>
             </ul>
           </nav>

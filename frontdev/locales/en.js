@@ -53,5 +53,16 @@ export default {
   ournumbersText4: 'types of products',
   management: 'Management',
   partners: 'Partners',
-  stra: 'Strategy'
+  stra: 'Strategy',
+  productTitle: 'Products',
+  vacanciesTitle: 'Vacancies',
+  galleryTitle: 'Gallery',
+  contactsTitle: 'Contacts',
+  catalogTitle: 'Our Catalog and price list',
+  catalogDesc:
+    'In current links you can be introduced with a catalogue of our products and pricelist.',
+  viewAll: 'View all',
+  heroBlockText: 'Plastic Polymer Raw Materials',
+  address: 'Address',
+  subscribe: 'Soc.nbsp;net:'
 }

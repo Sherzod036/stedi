@@ -1,20 +1,36 @@
 <template>
   <header class="header">
     <div class="header__container container">
-      <NuxtLink to="/" class="header__logo">
+      <NuxtLink :to="localePath('/')" class="header__logo">
         <img src="~assets/img/logos/logo.svg" alt="" />
       </NuxtLink>
       <Hamb @hamb-handler="hambHandler" />
       <div v-if="isHamb" class="header__inner">
         <nav class="header__navigation">
           <ul class="list">
-            <li
-              v-for="(nav, index) in navigation"
-              :key="index"
-              class="list__item"
-            >
-              <NuxtLink :to="nav.slug" class="list__link">
-                {{ nav.title }}
+            <li class="list__item">
+              <NuxtLink :to="localePath('/about')" class="list__link">
+                {{ $t('aboutTitle') }}
+              </NuxtLink>
+            </li>
+            <li class="list__item">
+              <NuxtLink :to="localePath('/categories')" class="list__link">
+                {{ $t('productTitle') }}
+              </NuxtLink>
+            </li>
+            <li class="list__item">
+              <NuxtLink :to="localePath('/vacancies')" class="list__link">
+                {{ $t('vacanciesTitle') }}
+              </NuxtLink>
+            </li>
+            <li class="list__item">
+              <NuxtLink :to="localePath('/gallery')" class="list__link">
+                {{ $t('galleryTitle') }}
+              </NuxtLink>
+            </li>
+            <li class="list__item">
+              <NuxtLink :to="localePath('/contacts')" class="list__link">
+                {{ $t('contactsTitle') }}
               </NuxtLink>
             </li>
           </ul>

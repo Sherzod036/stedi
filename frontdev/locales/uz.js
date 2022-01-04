@@ -57,5 +57,16 @@ export default {
   ournumbersText4: 'turdagi mahsulotlar',
   management: 'Rahbariyat',
   partners: 'Hamkorlar',
-  stra: 'Strategiya'
+  stra: 'Strategiya',
+  productTitle: 'Mahsulotlar',
+  vacanciesTitle: 'Vakansiyalar',
+  galleryTitle: 'Galereya',
+  contactsTitle: 'Kontaktlar',
+  catalogTitle: 'Bizning katalog va narxlari ro`yxati',
+  catalogDesc:
+    'Quyidagi ilovalar orqali bizning mahsulotlar katalogi, hamda narx navolar bilan tanishishingiz mumkin.',
+  viewAll: 'Hammasini ko`rish',
+  heroBlockText: 'Plastik Polimer Xomashyo',
+  address: 'Manzil',
+  subscribe: 'Ij.&nbsp;tarmoq:'
 }

@@ -3,7 +3,7 @@
     <div class="container">
       <Breadcrumbs />
 
-      <span class="page_title">Контакты</span>
+      <span class="page_title">{{ $t('contactsTitle') }}</span>
     </div>
 
     <LayoutContacts />

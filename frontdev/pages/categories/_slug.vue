@@ -12,7 +12,10 @@
         />
       </span>
 
-      <div class="page-product__link-ids row">
+      <div
+        v-if="category.products.length >= 1"
+        class="page-product__link-ids row"
+      >
         <div v-for="link in category.products" :key="link.id" class="col-xl-3">
           <a
             href="#"
