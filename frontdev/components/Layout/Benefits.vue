@@ -1,11 +1,21 @@
 <template>
   <section class="section benefits">
     <div class="container">
-      <div class="benefits__inner">
+      <div
+        class="benefits__inner"
+        data-aos="fade-up"
+        data-aos-duration="1500"
+        data-aos-delay="0"
+      >
         <h2 class="benefits__title title">Преимущества</h2>
       </div>
 
-      <div class="benefits__descs row">
+      <div
+        class="benefits__descs row"
+        data-aos="fade-up"
+        data-aos-duration="1500"
+        data-aos-delay="0"
+      >
         <div class="col-lg-6 col-xl-6">
           <p class="benefits__desc colored">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

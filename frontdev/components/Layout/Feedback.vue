@@ -3,11 +3,28 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-6 col-xl-6">
-          <h2 class="feedback__title title">Свяжитесь с нами</h2>
-          <p class="feedback__desc">
+          <h2
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-delay="0"
+            class="feedback__title title"
+          >
+            Свяжитесь с нами
+          </h2>
+          <p
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-delay="0"
+            class="feedback__desc"
+          >
             Дайте знать, если у вас возникли вопросы.
           </p>
-          <form class="feedback__form">
+          <form
+            class="feedback__form"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-delay="0"
+          >
             <input
               type="text"
               class="feedback__input"
@@ -42,7 +59,12 @@
           </form>
         </div>
         <div class="col-lg-6 col-xl-6">
-          <div class="feedback__bags">
+          <div
+            class="feedback__bags"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-delay="0"
+          >
             <span class="feedback__bag">
               <img src="~assets/img/bag.png" alt="" />
             </span>

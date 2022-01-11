@@ -82,10 +82,6 @@
         </div>
       </div>
     </div>
-
-    <!-- test -->
-
-    <!-- /test -->
   </header>
 </template>
 
@@ -93,13 +89,16 @@
 export default {
   data() {
     return {
-      isHamb: true
+      isHamb: false
     }
   },
   computed: {
     availableLocales() {
       return this.$i18n.locales.filter((i) => i.code !== this.$i18n.locale)
     }
+  },
+  mounted() {
+    window.innerWidth > 992 ? (this.isHamb = true) : (this.isHamb = false)
   },
   methods: {
     hambHandler(e) {

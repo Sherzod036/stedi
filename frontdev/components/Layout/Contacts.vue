@@ -1,7 +1,12 @@
 <template>
   <section class="contacts">
     <div class="container">
-      <div class="row">
+      <div
+        class="row"
+        data-aos="fade-up"
+        data-aos-duration="1500"
+        data-aos-delay="0"
+      >
         <div class="col-sm-6 col-md-6 col-lg-6 col-xl-4">
           <div class="contact">
             <span class="contact__title">{{ $t('address') }}:</span>

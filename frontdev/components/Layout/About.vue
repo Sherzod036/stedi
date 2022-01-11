@@ -20,23 +20,46 @@
             </svg>
           </span>
           <div class="about__inner">
-            <h2 class="about__title title">{{ $t('aboutTitle') }}</h2>
+            <h2
+              data-aos="fade-up"
+              data-aos-duration="1500"
+              class="about__title title"
+            >
+              {{ $t('aboutTitle') }}
+            </h2>
           </div>
 
-          <p class="about__desc">{{ $t('aboutDesc') }}</p>
+          <p data-aos="fade-up" data-aos-duration="1500" class="about__desc">
+            {{ $t('aboutDesc') }}
+          </p>
 
           <div class="about__infos">
-            <div class="about__info">
+            <div
+              class="about__info"
+              data-aos="fade-up"
+              data-aos-duration="1500"
+              data-aos-delay="0"
+            >
               <span class="about__info-count">28+</span>
-              <p class="about__info-text">Лет на рынке</p>
+              <p class="about__info-text">{{ $t('ournumbersText1') }}</p>
             </div>
-            <div class="about__info">
+            <div
+              class="about__info"
+              data-aos="fade-up"
+              data-aos-duration="1500"
+              data-aos-delay="500"
+            >
               <span class="about__info-count">10+</span>
-              <p class="about__info-text">Тонн ежедневно</p>
+              <p class="about__info-text">{{ $t('ournumbersText3') }}</p>
             </div>
-            <div class="about__info">
+            <div
+              class="about__info"
+              data-aos="fade-up"
+              data-aos-duration="1500"
+              data-aos-delay="1000"
+            >
               <span class="about__info-count">500+</span>
-              <p class="about__info-text">Сотрудников</p>
+              <p class="about__info-text">{{ $t('ournumbersText2') }}</p>
             </div>
           </div>
         </div>
@@ -60,7 +83,12 @@
         </div>
       </div>
 
-      <div class="row">
+      <div
+        class="row"
+        data-aos="fade-up"
+        data-aos-duration="1500"
+        data-aos-delay="0"
+      >
         <div class="col-md-4 col-lg-3 col-xl-2">
           <NuxtLink :to="localePath('/about#mission')" class="about__link-id">
             {{ $t('missionTitle') }}

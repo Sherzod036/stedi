@@ -1,7 +1,12 @@
 <template>
   <section class="vacancies">
     <div class="container">
-      <div class="vacancies__inner">
+      <div
+        class="vacancies__inner"
+        data-aos="fade-up"
+        data-aos-duration="1500"
+        data-aos-delay="0"
+      >
         <h2 class="vacancies__title title">{{ $t('vacanciesTitle') }}</h2>
         <NuxtLink to="/vacancies" class="viewall">{{ $t('viewAll') }}</NuxtLink>
       </div>
@@ -10,6 +15,9 @@
           v-for="vacancy in vacancies"
           :key="vacancy.id"
           class="col-md-6 col-lg-4 col-xl-4"
+          data-aos="fade-up"
+          data-aos-duration="1500"
+          data-aos-delay="0"
         >
           <div class="vacancy">
             <span class="vacancy__title">{{ vacancy.profession }}</span>

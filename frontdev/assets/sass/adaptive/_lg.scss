@@ -1,4 +1,36 @@
 @media (max-width: 992px) {
+  .hero__container {
+    height: 500px;
+  }
+  .scroll-down {
+    width: 50px;
+    height: 50px;
+  }
+  .hero__subscribe {
+    right: 15px;
+    bottom: 35px;
+  }
+  .hero__block {
+    max-width: 300px;
+    height: 210px;
+    &::after {
+      height: 210px;
+    }
+  }
+  .hero__title {
+    font-size: 50px;
+    line-height: 51px;
+  }
+  .page-product__link-ids {
+    margin-bottom: 50px;
+  }
+  .page-product__block {
+    margin-bottom: 0;
+  }
+  .product__left-block div,
+  .product__right-block div {
+    margin-bottom: 25px;
+  }
   .hamburger {
     display: block;
   }

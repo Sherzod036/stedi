@@ -2,7 +2,9 @@
   <section class="section hero">
     <div class="hero__container container">
       <div class="hero__block">
-        <h1 class="hero__title">{{ $t('heroBlockText') }}</h1>
+        <h1 class="hero__title">
+          {{ $t('heroBlockText') }}
+        </h1>
       </div>
 
       <div class="scroll-down">
@@ -74,6 +76,10 @@
           </svg>
         </a>
       </div>
+
+      <!-- Test -->
+
+      <!-- /Test -->
     </div>
   </section>
 </template>

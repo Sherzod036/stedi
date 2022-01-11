@@ -1,7 +1,12 @@
 <template>
   <section class="section gallery">
     <div class="container">
-      <div class="gallery__inner">
+      <div
+        class="gallery__inner"
+        data-aos="fade-up"
+        data-aos-duration="1500"
+        data-aos-delay="0"
+      >
         <h2 class="gallery__title title">{{ $t('galleryTitle') }}</h2>
         <NuxtLink :to="localePath('/gallery')" class="viewall">
           {{ $t('viewAll') }}

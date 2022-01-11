@@ -27,7 +27,8 @@ export default {
     '~plugins/vue-slick-carousel.js',
     '~plugins/v-mask.js',
     '~plugins/vue-lazyload.js',
-    '~plugins/vuelidate.js'
+    '~plugins/vuelidate.js',
+    { src: '~plugins/aos.js', ssr: false }
   ],
 
   components: true,
@@ -59,7 +60,7 @@ export default {
   },
 
   axios: {
-    baseURL: 'http://stedi.loc/api',
+    baseURL: 'https://api.stedi.uz/api',
     debug: false
   },
 
