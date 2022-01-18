@@ -7,7 +7,7 @@
         data-aos-duration="1500"
         data-aos-delay="0"
       >
-        <h2 class="benefits__title title">Преимущества</h2>
+        <h2 class="benefits__title title">{{ $t('benefitsTitle') }}</h2>
       </div>
 
       <div
@@ -17,31 +17,17 @@
         data-aos-delay="0"
       >
         <div class="col-lg-6 col-xl-6">
-          <p class="benefits__desc colored">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt.
-          </p>
+          <p class="benefits__desc colored">{{ $t('benefits1Desc') }}</p>
         </div>
         <div class="col-lg-6 col-xl-6 ordinary">
-          <p class="benefits__desc">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure
-          </p>
+          <p class="benefits__desc">{{ $t('benefits2Desc') }}</p>
         </div>
       </div>
 
       <div class="benefits__blocks">
         <div class="benefits__block">
-          <div class="benefit">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </div>
-          <div class="benefit">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </div>
+          <div class="benefit">{{ $t('benefit1') }}</div>
+          <div class="benefit">{{ $t('benefit2') }}</div>
           <div class="benefit benefit_icon">
             <svg
               width="143"
@@ -58,15 +44,10 @@
               />
             </svg>
           </div>
-          <div class="benefit benefit_colored">
-            Качество нашей продукции превосходит ожидания клиентов
-          </div>
+          <div class="benefit benefit_colored">{{ $t('benefit3') }}</div>
         </div>
         <div class="benefits__block">
-          <div class="benefit benefit_big">
-            Мы повышаем качество нашей продукции регулярно, совершенствуя
-            производственные процессы, используя опыт и современные технологии
-          </div>
+          <div class="benefit benefit_big">{{ $t('benefit4') }}</div>
         </div>
       </div>
     </div>

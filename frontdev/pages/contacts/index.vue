@@ -1,7 +1,7 @@
 <template>
   <div class="page-contacts">
     <div class="container">
-      <Breadcrumbs />
+      <Breadcrumbs :crumbs="crumbs" />
 
       <span class="page_title">{{ $t('contactsTitle') }}</span>
     </div>
@@ -23,3 +23,24 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      crumbs: [
+        {
+          title: this.$t('mainTitle'),
+          link: '/'
+        },
+        {
+          title: this.$t('contactsTitle'),
+          link: '#'
+        }
+      ]
+    }
+  }
+}
+</script>
+
+<style lang="scss" scoped></style>

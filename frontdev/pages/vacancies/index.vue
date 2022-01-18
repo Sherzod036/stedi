@@ -1,7 +1,7 @@
 <template>
   <div class="page-vacancies">
     <div class="container">
-      <Breadcrumbs />
+      <Breadcrumbs :crumbs="crumbs" />
 
       <span class="page_title">{{ $t('vacanciesTitle') }}</span>
 
@@ -70,7 +70,17 @@ export default {
 
   data() {
     return {
-      Hs: []
+      Hs: [],
+      crumbs: [
+        {
+          title: this.$t('mainTitle'),
+          link: '/'
+        },
+        {
+          title: this.$t('vacanciesTitle'),
+          link: '#'
+        }
+      ]
     }
   },
 

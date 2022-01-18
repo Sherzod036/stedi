@@ -1,7 +1,7 @@
 <template>
   <div class="page-about page">
     <div class="container">
-      <Breadcrumbs />
+      <Breadcrumbs :crumbs="crumbs" />
       <div class="page-about__top-block">
         <span class="page-about__icon">
           <svg
@@ -376,7 +376,17 @@ export default {
   data() {
     return {
       isFixed: false,
-      stickyElPos: 0
+      stickyElPos: 0,
+      crumbs: [
+        {
+          title: this.$t('mainTitle'),
+          link: '/'
+        },
+        {
+          title: this.$t('aboutTitle'),
+          link: '#'
+        }
+      ]
     }
   }
 

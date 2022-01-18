@@ -1,11 +1,32 @@
 <template>
   <div class="breadcrumbs">
-    <a href="#" class="breadcrumbs__link">Главная</a>
+    <NuxtLink :to="crumbs[0].link" class="breadcrumbs__link">
+      {{ crumbs[0].title }}
+    </NuxtLink>
     <span class="slash">/</span>
-    <a href="#" class="breadcrumbs__link disabled">О компании</a>
+    <NuxtLink
+      :to="crumbs[1].link"
+      class="breadcrumbs__link"
+      :class="!crumbs[2] ? 'disabled' : ''"
+    >
+      {{ crumbs[1].title }}
+    </NuxtLink>
+    <span v-if="crumbs[2]">
+      <span class="slash">/</span>
+      <NuxtLink :to="crumbs[2].link" class="breadcrumbs__link disabled">
+        {{ crumbs[2].title }}
+      </NuxtLink>
+    </span>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  props: {
+    crumbs: {
+      type: Array,
+      default: Array
+    }
+  }
+}
 </script>

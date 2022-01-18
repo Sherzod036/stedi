@@ -1,7 +1,7 @@
 <template>
   <div class="page-gallery">
     <div class="section container">
-      <Breadcrumbs />
+      <Breadcrumbs :crumbs="crumbs" />
 
       <span class="page_title">{{ $t('galleryTitle') }}</span>
 
@@ -36,7 +36,17 @@ export default {
         slidesToShow: 1,
         draggable: false,
         infinite: true
-      }
+      },
+      crumbs: [
+        {
+          title: this.$t('mainTitle'),
+          link: '/'
+        },
+        {
+          title: this.$t('galleryTitle'),
+          link: '#'
+        }
+      ]
     }
   }
 }

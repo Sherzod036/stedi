@@ -1,7 +1,7 @@
 <template>
   <div class="page-categories page">
     <div class="container">
-      <Breadcrumbs />
+      <Breadcrumbs :crumbs="crumbs" />
 
       <span class="page_title">{{ $t('productTitle') }}</span>
 
@@ -52,6 +52,20 @@ export default {
     const response = await $axios.$get('/categories', config)
 
     return { categories: response.data }
+  },
+  data() {
+    return {
+      crumbs: [
+        {
+          title: this.$t('mainTitle'),
+          link: '/'
+        },
+        {
+          title: this.$t('productTitle'),
+          link: '#'
+        }
+      ]
+    }
   }
 }
 </script>

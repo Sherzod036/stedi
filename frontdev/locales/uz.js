@@ -1,4 +1,5 @@
 export default {
+  mainTitle: 'Bosh sahifa',
   aboutTitle: 'Kompaniya haqida',
   aboutDesc:
     'Bizning korxonamizga 1993 yilda asos solingan. Korxonamiz o’tgan 28 yil davomida ulgurji savdo va ishlab chiqarish faoliyatlari bilan shug’illangan. 2008 yildan boshlab polimer mahsulotlar uchun granulalangan superkonsentrat (Masterbatch) bo’yog’i ishlab chiqarish faoliyati yo’lga qo’yildi. Bizning mahsulotlar nemis texnologiyasi asosida ishlab chiqarilganligi, texnik hodimlarning yuqori malaka va ko`nikmalari, doimiy sifat nazorati sababli polimer bozorida sifat darajasi bilan ajralib turadi.',
@@ -69,5 +70,16 @@ export default {
   heroBlockText: 'Plastik Polimer Xomashyo',
   address: 'Manzil',
   subscribe: 'Ij.&nbsp;tarmoq:',
-  pages: 'Sahifalar'
+  pages: 'Sahifalar',
+  benefitsTitle: 'Afzalliklarimiz',
+  benefits1Desc: 'Har bir haridorga alohida e`tibor',
+  benefits2Desc:
+    'Bizning tajribali texnologlarimiz buyurtma miqdoridan kelib chiqib haridor talabidagi rangda mahsulot tayyorlab berish imkoniga ega. Shu maqsadda korxonamizda mahsus uskunalarga ega labaratoriya tashkil etilgan.',
+  benefit1:
+    'Mahalliy va horijiy bozorga ekologik sof mahsulotlar yetkazib beramiz.',
+  benefit2:
+    'Muntazam sifatni oshirgan tarzda yuqori texnologik mahsulotlar ishlab chiqaramiz.',
+  benefit3: 'Mahsulotlarimiz sifati haridorlarni lol qoldiradi.',
+  benefit4:
+    'Doimiy ravishda ishlab chiqarish jarayonlarini takomillashtirib borish, tajribalardan foydalanish va yangi zamonaviy texnologiyalarni ishda qo’llash orqali mahsulotlar sifatini oshirib boramiz.'
 }

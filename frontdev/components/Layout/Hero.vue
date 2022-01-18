@@ -76,10 +76,6 @@
           </svg>
         </a>
       </div>
-
-      <!-- Test -->
-
-      <!-- /Test -->
     </div>
   </section>
 </template>

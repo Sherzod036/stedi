@@ -1,13 +1,13 @@
 <template>
   <div class="page-product">
     <div class="container">
-      <Breadcrumbs />
+      <Breadcrumbs :crumbs="crumbs" />
 
       <span class="page_title">{{ category.title }}</span>
 
       <span class="product__image">
         <img
-          :src="`http://stedi.loc/storage/uploads/${category.image_path}`"
+          :src="`https://api.stedi.uz/storage/uploads/${category.image_path}`"
           alt=""
         />
       </span>
@@ -65,6 +65,21 @@ export default {
     const response = await $axios.$get(`/categories/${route.params.slug}`)
 
     return { category: response.data }
+  },
+
+  data() {
+    return {
+      crumbs: [
+        {
+          title: this.$t('mainTitle'),
+          link: '/'
+        },
+        {
+          title: this.$t('productTitle'),
+          link: '/categories'
+        }
+      ]
+    }
   },
 
   methods: {

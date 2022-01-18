@@ -1,4 +1,5 @@
 export default {
+  mainTitle: 'Main',
   aboutTitle: 'About',
   aboutDesc:
     'Our company was founded in 1993. Last 28 years, the company has been engaged in wholesale trade and manufacturing. In August 2008, we launched the production of super concentrated polymer dyes (masterbatch) used for the production of polymer products. The use of advanced German technology in production, the availability of highly qualified personnel, as well as the implementation of systematic quality control of manufactured products contribute to a constant increase in production and sales. They help to win a marketshare in the polymer dyes market.',
@@ -65,5 +66,14 @@ export default {
   heroBlockText: 'Plastic Polymer Raw Materials',
   address: 'Address',
   subscribe: 'Soc.nbsp;net:',
-  pages: 'Pages'
+  pages: 'Pages',
+  benefitsTitle: 'Strength',
+  benefits1Desc: 'Individual approach for each client',
+  benefits2Desc:
+    'Depending on the volume of the order our experienced technologists can create any color of masterbatch at the request of the customer. So, our company operates a laboratory equipped with special equipment.',
+  benefit1: 'We offer nature friendly products to local and foreign markets. ',
+  benefit2: 'We produce high-tech goods and regularly improve their quality.',
+  benefit3: 'The quality of our products exceeds customer expectations.',
+  benefit4:
+    'We improve the quality of our products regularly, improving production processes, using experience and modern technologies.'
 }
