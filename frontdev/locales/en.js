@@ -50,7 +50,7 @@ export default {
   ournumbers: 'Our numbers',
   ournumbersText1: 'years on the market',
   ournumbersText2: 'employees',
-  ournumbersText3: 'tons daily',
+  ournumbersText3: 'tons in month',
   ournumbersText4: 'types of products',
   management: 'Management',
   partners: 'Partners',
@@ -65,7 +65,7 @@ export default {
   viewAll: 'View all',
   heroBlockText: 'Plastic Polymer Raw Materials',
   address: 'Address',
-  subscribe: 'Soc.nbsp;net:',
+  subscribe: 'Soc. net:',
   pages: 'Pages',
   benefitsTitle: 'Strength',
   benefits1Desc: 'Individual approach for each client',
@@ -75,5 +75,39 @@ export default {
   benefit2: 'We produce high-tech goods and regularly improve their quality.',
   benefit3: 'The quality of our products exceeds customer expectations.',
   benefit4:
-    'We improve the quality of our products regularly, improving production processes, using experience and modern technologies.'
+    'We improve the quality of our products regularly, improving production processes, using experience and modern technologies.',
+  all_categories: 'All categories',
+  main_location: 'Uzbekistan, Tashkent city, <br /> A. Khahhar street, 9-1',
+  otdel: 'Sales department',
+  site_map: 'Site map',
+  download_products: 'Download the product catalog',
+  phone: 'Phone',
+  copy: '© 2021 LLC "STEDI". All rights reserved',
+  catalog_price: 'Download the catalog and price list',
+  products: {
+    product_v1: {
+      title: 'Polymers',
+      url: '/en/categories/polymers'
+    },
+    product_v2: {
+      title: 'Concentrated dye',
+      url: '/en/categories/concentrated-dye'
+    },
+    product_v3: {
+      title: 'additives-for-polymer',
+      url: '/en/categories/additives-for-polymer'
+    },
+    product_v4: {
+      title: 'Compounds',
+      url: '/en/categories/compounds'
+    },
+    product_v5: {
+      title: 'Chemics for plastics',
+      url: '/en/categories/chemics-for-plastics'
+    },
+    product_v6: {
+      title: 'Pigments',
+      url: '/en/categories/pigments'
+    }
+  }
 }

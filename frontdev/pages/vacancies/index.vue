@@ -98,6 +98,22 @@ export default {
 
   methods: {
     showHandler(e) {
+      const allContent = document.querySelectorAll('.page-vacancy__content')
+      const allTitle = document.querySelectorAll('.page-vacancy__profession')
+      const allIcon = document.querySelectorAll('.page-vacancy__icon')
+      Array.from(allContent).map((i) => {
+        i.classList.add('disabled')
+        i.style.height = '0px'
+        return true
+      })
+      Array.from(allTitle).map((title) => title.classList.remove('active'))
+
+      Array.from(allIcon).map((icon) => {
+        console.log(icon.children)
+        icon.children[1].style.transform = 'rotate(90deg)'
+        return true
+      })
+
       const id = Number(e.target.parentNode.getAttribute('data-id')) - 1
       const prevEl = e.target.previousElementSibling.children
 

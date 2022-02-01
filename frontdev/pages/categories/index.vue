@@ -11,7 +11,7 @@
           :key="category.id"
           class="col-md-6 col-lg-4"
         >
-          <NuxtLink :to="`/categories/${category.slug}`" class="category">
+          <NuxtLink :to="`categories/${category.slug}`" class="category">
             <span class="category__icon" v-html="category.icon"> </span>
             <span class="category__title">{{ category.title }}</span>
           </NuxtLink>

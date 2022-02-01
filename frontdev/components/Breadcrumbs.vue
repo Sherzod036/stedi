@@ -1,11 +1,11 @@
 <template>
   <div class="breadcrumbs">
-    <NuxtLink :to="crumbs[0].link" class="breadcrumbs__link">
+    <NuxtLink :to="localePath(`/${crumbs[0].link}`)" class="breadcrumbs__link">
       {{ crumbs[0].title }}
     </NuxtLink>
     <span class="slash">/</span>
     <NuxtLink
-      :to="crumbs[1].link"
+      :to="localePath(`/${crumbs[1].link}`)"
       class="breadcrumbs__link"
       :class="!crumbs[2] ? 'disabled' : ''"
     >
@@ -13,7 +13,10 @@
     </NuxtLink>
     <span v-if="crumbs[2]">
       <span class="slash">/</span>
-      <NuxtLink :to="crumbs[2].link" class="breadcrumbs__link disabled">
+      <NuxtLink
+        :to="localePath(`/${crumbs[2].link}`)"
+        class="breadcrumbs__link disabled"
+      >
         {{ crumbs[2].title }}
       </NuxtLink>
     </span>

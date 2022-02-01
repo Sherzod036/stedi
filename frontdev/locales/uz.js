@@ -54,7 +54,7 @@ export default {
   ournumbers: 'Bizning raqamlar',
   ournumbersText1: 'bozorda',
   ournumbersText2: 'xodimlar',
-  ournumbersText3: 'tonna har kuni',
+  ournumbersText3: 'tonna oyiga',
   ournumbersText4: 'turdagi mahsulotlar',
   management: 'Rahbariyat',
   partners: 'Hamkorlar',
@@ -69,7 +69,7 @@ export default {
   viewAll: 'Hammasini ko`rish',
   heroBlockText: 'Plastik Polimer Xomashyo',
   address: 'Manzil',
-  subscribe: 'Ij.&nbsp;tarmoq:',
+  subscribe: 'Ij. tarmoq:',
   pages: 'Sahifalar',
   benefitsTitle: 'Afzalliklarimiz',
   benefits1Desc: 'Har bir haridorga alohida e`tibor',
@@ -81,5 +81,39 @@ export default {
     'Muntazam sifatni oshirgan tarzda yuqori texnologik mahsulotlar ishlab chiqaramiz.',
   benefit3: 'Mahsulotlarimiz sifati haridorlarni lol qoldiradi.',
   benefit4:
-    'Doimiy ravishda ishlab chiqarish jarayonlarini takomillashtirib borish, tajribalardan foydalanish va yangi zamonaviy texnologiyalarni ishda qo’llash orqali mahsulotlar sifatini oshirib boramiz.'
+    'Doimiy ravishda ishlab chiqarish jarayonlarini takomillashtirib borish, tajribalardan foydalanish va yangi zamonaviy texnologiyalarni ishda qo’llash orqali mahsulotlar sifatini oshirib boramiz.',
+  all_categories: 'Barcha kategoriyalar',
+  main_location: 'O`zbekiston, Toshkent sh., <br /> A. Qahhor ko`chasi, 9-1 uy',
+  otdel: 'Savdo bo`limi',
+  site_map: 'Sayt xaritasi',
+  download_products: 'Mahsulot katalogini yuklab olish',
+  phone: 'Telefon',
+  copy: '© 2021 "STEDI" MCHJ. Barcha huquqlar himoyalangan',
+  catalog_price: 'Katalog va narxlarni ro`yxatini yuklab oling',
+  products: {
+    product_v1: {
+      title: 'Polimerlar',
+      url: '/uz/categories/polimerlar'
+    },
+    product_v2: {
+      title: 'Granulalangan superkonsentrat',
+      url: '/uz/categories/granulalangan-superkonsentrat'
+    },
+    product_v3: {
+      title: 'Polimer uchun qo`shimchalar',
+      url: '/uz/categories/polimer-uchun-qoshimchalar'
+    },
+    product_v4: {
+      title: 'Kompaundlar',
+      url: '/uz/categories/kompaundlar'
+    },
+    product_v5: {
+      title: 'Plastmassa uchun kimyo vositalari',
+      url: '/uz/categories/plastmassa-uchun-kimyo-vositalari'
+    },
+    product_v6: {
+      title: 'Pigmentlar',
+      url: '/uz/categories/pigmentlar'
+    }
+  }
 }

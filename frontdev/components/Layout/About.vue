@@ -49,7 +49,7 @@
               data-aos-duration="1500"
               data-aos-delay="500"
             >
-              <span class="about__info-count">10+</span>
+              <span class="about__info-count">16+</span>
               <p class="about__info-text">{{ $t('ournumbersText3') }}</p>
             </div>
             <div

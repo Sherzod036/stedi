@@ -1,7 +1,7 @@
 <template>
   <section class="section hero">
     <div class="hero__container container">
-      <div class="hero__block">
+      <div class="hero__block" :class="isLoaded ? 'active' : ''">
         <h1 class="hero__title">
           {{ $t('heroBlockText') }}
         </h1>
@@ -81,5 +81,14 @@
 </template>
 
 <script>
-export default {}
+export default {
+  data: () => ({
+    isLoaded: false
+  }),
+  mounted() {
+    setTimeout(() => {
+      this.isLoaded = true
+    }, 1000)
+  }
+}
 </script>

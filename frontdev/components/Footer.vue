@@ -59,27 +59,57 @@
           <nav class="footer__navigation">
             <ul class="list">
               <li class="list__item">
-                <a href="#" class="list__link">Полимеры</a>
+                <NuxtLink
+                  :to="$t('products.product_v1.url')"
+                  class="list__link"
+                >
+                  {{ $t('products.product_v1.title') }}
+                </NuxtLink>
               </li>
               <li class="list__item">
-                <a href="#" class="list__link">
-                  Суперконцентраты гранулированные
-                </a>
+                <NuxtLink
+                  :to="$t('products.product_v2.url')"
+                  class="list__link"
+                >
+                  {{ $t('products.product_v2.title') }}
+                </NuxtLink>
               </li>
               <li class="list__item">
-                <a href="#" class="list__link">Добавки для полимера</a>
+                <NuxtLink
+                  :to="$t('products.product_v3.url')"
+                  class="list__link"
+                >
+                  {{ $t('products.product_v3.title') }}
+                </NuxtLink>
               </li>
               <li class="list__item">
-                <a href="#" class="list__link">Компаунды</a>
+                <NuxtLink
+                  :to="$t('products.product_v4.url')"
+                  class="list__link"
+                >
+                  {{ $t('products.product_v4.title') }}
+                </NuxtLink>
               </li>
               <li class="list__item">
-                <a href="#" class="list__link">Химия для пластмассы</a>
+                <NuxtLink
+                  :to="$t('products.product_v5.url')"
+                  class="list__link"
+                >
+                  {{ $t('products.product_v5.title') }}
+                </NuxtLink>
               </li>
               <li class="list__item">
-                <a href="#" class="list__link">Пигменты</a>
+                <NuxtLink
+                  :to="$t('products.product_v6.url')"
+                  class="list__link"
+                >
+                  {{ $t('products.product_v6.title') }}
+                </NuxtLink>
               </li>
               <li class="list__item">
-                <a href="#" class="list__link">Все категории</a>
+                <NuxtLink :to="$t('products.product_v1.url')" class="list__link">
+                  {{ $t('all_categories') }}
+                </NuxtLink>
               </li>
             </ul>
           </nav>
@@ -88,30 +118,29 @@
           <span class="footer__title">{{ $t('contactsTitle') }}</span>
           <div class="footer__inner">
             <span class="footer__inner-title">{{ $t('address') }}:</span>
-            <a href="#" class="footer__link">
-              Узбекистан, г.Ташкент, <br />
-              ул.А.Каххара, 9-й пр., дом 1а
-            </a>
+            <a href="#" class="footer__link" v-html="$t('main_location')"></a>
           </div>
           <div class="footer__inner">
-            <span class="footer__inner-title">Телефон:</span>
-            <a href="#" class="footer__link">
-              (+998 78) 129-00-29 - Отдел продаж
+            <span class="footer__inner-title">{{ $t('phone') }}:</span>
+            <a href="tel:+998781290029" class="footer__link">
+              (+998 78) 129-00-29 - {{ $t('otdel') }}
             </a>
           </div>
           <div class="footer__inner">
             <span class="footer__inner-title">Email:</span>
-            <a href="#" class="footer__link">info@stedi.uz</a>
+            <a href="mailto:info@stedi.uz" class="footer__link">
+              info@stedi.uz
+            </a>
           </div>
         </div>
       </div>
 
       <div class="row">
         <div class="col-lg-4 col-xl-4">
-          <a href="#" class="site-map">Карта сайта</a>
+          <a href="#" class="site-map">{{ $t('site_map') }}</a>
         </div>
         <div class="col-lg-4 col-xl-4">
-          <a href="#" class="catalog-link">Скачать каталог продукций</a>
+          <a href="#" class="catalog-link">{{ $t('download_products') }}</a>
         </div>
         <div class="col-lg-4 col-xl-4">
           <div class="subscribe">
@@ -171,7 +200,7 @@
       </div>
 
       <div class="copy">
-        <p class="copy__text">© 2021 ООО «STEDI». Все права защищены</p>
+        <p class="copy__text">{{ $t('copy') }}</p>
         <a href="https://xspace.uz/" class="space" target="_blank">
           <img src="~assets/img/logos/space.svg" alt="" />
         </a>
@@ -181,5 +210,3 @@
 </template>
 
 <script>
-export default {}
-</script>

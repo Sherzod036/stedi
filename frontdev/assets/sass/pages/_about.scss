@@ -42,6 +42,10 @@
     position: fixed;
     top: 100px;
   }
+  &.invisible {
+    opacity: 0;
+    visibility: hidden;
+  }
   width: 166px;
   background: #fafafa;
   padding: 10px 20px;

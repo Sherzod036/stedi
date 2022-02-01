@@ -29,28 +29,69 @@
 
         <div class="row">
           <div class="col-xl-2">
-            <nav class="navbar" :class="{ fixed: isFixed }">
+            <nav
+              class="navbar"
+              :class="{ fixed: isFixed, invisible: invisible }"
+            >
               <ul class="list">
                 <li class="list__item">
-                  <a href="#" class="list__link">{{ $t('missionTitle') }}</a>
+                  <a
+                    href="#"
+                    class="list__link"
+                    @click.prevent="scrollHandler('mission')"
+                  >
+                    {{ $t('missionTitle') }}</a
+                  >
                 </li>
                 <li class="list__item">
-                  <a href="#" class="list__link">{{ $t('valuesTitle') }}</a>
+                  <a
+                    href="#"
+                    class="list__link"
+                    @click.prevent="scrollHandler('values')"
+                  >
+                    {{ $t('valuesTitle') }}
+                  </a>
                 </li>
                 <li class="list__item">
-                  <a href="#" class="list__link">{{ $t('stra') }}</a>
+                  <a
+                    href="#"
+                    class="list__link"
+                    @click.prevent="scrollHandler('strategies')"
+                  >
+                    {{ $t('stra') }}
+                  </a>
                 </li>
                 <li class="list__item">
-                  <a href="#" class="list__link">{{ $t('ournumbers') }}</a>
+                  <a
+                    href="#"
+                    class="list__link"
+                    @click.prevent="scrollHandler('our-num')"
+                    >{{ $t('ournumbers') }}</a
+                  >
                 </li>
                 <li class="list__item">
-                  <a href="#" class="list__link">{{ $t('historyTitle') }}</a>
+                  <a
+                    href="#"
+                    class="list__link"
+                    @click.prevent="scrollHandler('history')"
+                    >{{ $t('historyTitle') }}</a
+                  >
                 </li>
                 <li class="list__item">
-                  <a href="#" class="list__link">{{ $t('management') }}</a>
+                  <a
+                    href="#"
+                    class="list__link"
+                    @click.prevent="scrollHandler('management')"
+                    >{{ $t('management') }}</a
+                  >
                 </li>
                 <li class="list__item">
-                  <a href="#" class="list__link">{{ $t('partners') }}</a>
+                  <a
+                    href="#"
+                    class="list__link"
+                    @click.prevent="scrollHandler('partners')"
+                    >{{ $t('partners') }}</a
+                  >
                 </li>
               </ul>
             </nav>
@@ -95,7 +136,7 @@
             <div id="strategies" class="strategies page_section">
               <h2 class="page-about__title-colored">
                 <span class="color">{{ $t('strategies1Title') }}</span
-                >&nbsp;&nbsp;
+                >&nbsp;
                 <span>{{ $t('strategies2Title') }}</span>
               </h2>
               <p class="strategies__desc">{{ $t('strategiesDesc') }}</p>
@@ -136,7 +177,7 @@
       </div>
     </div>
 
-    <div class="our-nums page_section">
+    <div id="our-num" class="our-nums page_section">
       <div class="container">
         <div class="row">
           <div class="col-xl-2"></div>
@@ -152,7 +193,7 @@
                 <p class="our-num__text">{{ $t('ournumbersText2') }}</p>
               </div>
               <div class="our-num">
-                <span class="our-num__count">10+</span>
+                <span class="our-num__count">16+</span>
                 <p class="our-num__text">{{ $t('ournumbersText3') }}</p>
               </div>
               <div class="our-num">
@@ -376,7 +417,8 @@ export default {
   data() {
     return {
       isFixed: false,
-      stickyElPos: 0,
+      invisible: false,
+      posNavbar: 0,
       crumbs: [
         {
           title: this.$t('mainTitle'),
@@ -388,21 +430,45 @@ export default {
         }
       ]
     }
+  },
+
+  mounted() {
+    this.posNavbar = document.querySelector('.navbar').offsetTop
+    window.addEventListener('scroll', this.handleScroll)
+  },
+
+  destroyed() {
+    window.removeEventListener('scroll', this.handleScroll)
+  },
+
+  methods: {
+    scrollHandler(id) {
+      const el = document.getElementById(id)
+
+      const posDoc = el.offsetTop - 150
+
+      window.scrollTo({
+        top: posDoc,
+        behavior: 'smooth'
+      })
+    },
+
+    handleScroll(e) {
+      const conactsOffset = document.querySelector('.contacts').offsetTop
+      if (window.scrollY > this.posNavbar) {
+        this.isFixed = true
+      } else if (window.scrollY < this.posNavbar) {
+        this.isFixed = false
+      } else {
+        this.isFixed = false
+      }
+
+      if (window.scrollY >= conactsOffset - 550) {
+        this.invisible = true
+      } else {
+        this.invisible = false
+      }
+    }
   }
-
-  // mounted() {
-  //   window.addEventListener('scroll', this.sticky)
-
-  //   const offsetEl = document.querySelector('.navbar').offsetTop
-  //   this.stickyElPos = offsetEl
-  // },
-
-  // methods: {
-  //   sticky(event) {
-  //     window.scrollY >= this.stickyElPos
-  //       ? (this.isFixed = true)
-  //       : (this.isFixed = false)
-  //   }
-  // }
 }
 </script>

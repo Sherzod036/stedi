@@ -50,10 +50,10 @@ export default {
   ournumbers: 'Наши цифры',
   ournumbersText1: 'лет на рынке',
   ournumbersText2: 'сотрудников',
-  ournumbersText3: 'тонн ежедневно',
+  ournumbersText3: 'тонна в месяц',
   ournumbersText4: 'видов продукции',
   management: 'Руководство',
-  partners: 'Партенеры',
+  partners: 'Партнеры',
   stra: 'Стратегия',
   productTitle: 'Продукция',
   vacanciesTitle: 'Вакансии',
@@ -65,7 +65,7 @@ export default {
   viewAll: 'Посмотреть все',
   heroBlockText: 'Пластик Полимер Сырья',
   address: 'Адресс',
-  subscribe: 'Соц.&nbsp;сети:',
+  subscribe: 'Соц. сети:',
   pages: 'Страницы',
   benefitsTitle: 'Преимущества',
   benefits1Desc: 'Индивидуальных подход к каждому клиенту',
@@ -77,5 +77,39 @@ export default {
     'Производим высокотехнологичные товары и регулярно повышая их качество.',
   benefit3: 'Качество нашей продукции превосходит ожидания клиентов.',
   benefit4:
-    'Мы повышаем качество нашей продукции регулярно, совершенствуя производственные процессы, используя опыт и современные технологии.'
+    'Мы повышаем качество нашей продукции регулярно, совершенствуя производственные процессы, используя опыт и современные технологии.',
+  all_categories: 'Все категории',
+  main_location: 'Узбекистан, г.Ташкент, <br /> ул.А.Каххара, 9-й пр., дом 1а',
+  otdel: 'Отдел продаж',
+  site_map: 'Карта сайта',
+  download_products: 'Скачать каталог продукций',
+  phone: 'Телефон',
+  copy: '© 2021 ООО «STEDI». Все права защищены',
+  catalog_price: 'Скачать каталог и прайс-лист',
+  products: {
+    product_v1: {
+      title: 'Полимеры',
+      url: '/categories/polimery'
+    },
+    product_v2: {
+      title: 'Суперконцентраты гранулированные',
+      url: '/categories/superkoncentraty-granulirovannye'
+    },
+    product_v3: {
+      title: 'Добавки для полимера',
+      url: '/categories/dobavki-dlya-polimera'
+    },
+    product_v4: {
+      title: 'Компаунды',
+      url: '/categories/kompaundy'
+    },
+    product_v5: {
+      title: 'Химия для пластмассы',
+      url: '/categories/himiya-dlya-plastmassy'
+    },
+    product_v6: {
+      title: 'Пигменты',
+      url: '/categories/pigmenty'
+    }
+  }
 }

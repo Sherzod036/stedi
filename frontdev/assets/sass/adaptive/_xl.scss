@@ -1,6 +1,13 @@
 @media (max-width: 1200px) {
   .navbar {
-    display: none;
+    position: static !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  .page-about__title-colored {
+    flex-direction: column;
   }
   .header__logo {
     margin-right: 60px;

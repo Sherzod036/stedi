@@ -10,16 +10,17 @@
         <div class="col-sm-6 col-md-6 col-lg-6 col-xl-4">
           <div class="contact">
             <span class="contact__title">{{ $t('address') }}:</span>
-            <a href="#" class="contact__link">
-              Узбекистан, г.Ташкент, ул.А.Каххара, 9-й пр., дом 1а
-            </a>
+            <a href="#" class="contact__link" v-html="$t('main_location')"></a>
           </div>
         </div>
         <div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
           <div class="contact">
             <span class="contact__title">{{ $t('contactsTitle') }}:</span>
-            <a href="#" class="contact__link">(78) 129-00-29</a><br />
-            <a href="#" class="contact__link">info@stedi.uz</a>
+            <a href="tel:+998781290029" class="contact__link">(78) 129-00-29</a
+            ><br />
+            <a href="mailto:info@stedi.uz" class="contact__link">
+              info@stedi.uz
+            </a>
           </div>
         </div>
         <div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
