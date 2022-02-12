@@ -77,6 +77,7 @@ export default {
   benefit4:
     'We improve the quality of our products regularly, improving production processes, using experience and modern technologies.',
   all_categories: 'All categories',
+  all_categories_url: '/en/categories',
   main_location: 'Uzbekistan, Tashkent city, <br /> A. Khahhar street, 9-1',
   otdel: 'Sales department',
   site_map: 'Site map',
@@ -109,5 +110,17 @@ export default {
       title: 'Pigments',
       url: '/en/categories/pigments'
     }
-  }
+  },
+  feedback: {
+    title: 'Contact us',
+    desc: 'Let me know if you have any questions.',
+    name: 'Your name*',
+    email: 'Your e-mail*',
+    company: 'Company name',
+    phone: 'Phone number',
+    message: 'Message',
+    button: 'Send',
+    conf: "By clicking the 'Submit' button, you agree <br/> <a href='#'> with the privacy policy</a>"
+  },
+  techWork: 'The site is in development mode'
 }

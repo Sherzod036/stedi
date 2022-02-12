@@ -14,16 +14,19 @@
       </div>
       <VueSlickCarousel v-bind="settings" class="gallery-slider">
         <div class="gallery__image">
-          <img src="~assets/img/gallery.jpg" alt="" />
+          <img src="~assets/img/gallery/gallery-2.jpg" alt="" />
         </div>
         <div class="gallery__image">
-          <img src="~assets/img/gallery.jpg" alt="" />
+          <img src="~assets/img/gallery/gallery-8.jpg" alt="" />
         </div>
         <div class="gallery__image">
-          <img src="~assets/img/gallery.jpg" alt="" />
+          <img src="~assets/img/gallery/gallery-15.jpg" alt="" />
         </div>
         <div class="gallery__image">
-          <img src="~assets/img/gallery.jpg" alt="" />
+          <img src="~assets/img/gallery/gallery-4.jpg" alt="" />
+        </div>
+        <div class="gallery__image">
+          <img src="~assets/img/gallery/gallery-5.jpg" alt="" />
         </div>
       </VueSlickCarousel>
     </div>

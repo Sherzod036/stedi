@@ -1,5 +1,6 @@
 <template>
   <header class="header">
+    <div class="techwork">{{ $t('techWork') }}</div>
     <div class="header__container container">
       <NuxtLink :to="localePath('/')" class="header__logo">
         <img src="~assets/img/logos/logo.svg" alt="" />
@@ -71,13 +72,13 @@
             </span>
           </span>
           <div class="header__lang-dropdown">
-            <NuxtLink
+            <a
               v-for="locale in availableLocales"
               :key="locale.code"
-              :to="switchLocalePath(locale.code)"
+              :href="switchLocalePath(locale.code)"
             >
               {{ locale.code }}
-            </NuxtLink>
+            </a>
           </div>
         </div>
       </div>

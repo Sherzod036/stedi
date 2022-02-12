@@ -61,6 +61,10 @@ export default {
 
   axios: {
     baseURL: 'https://api.stedi.uz/api',
+    common: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json'
+    },
     debug: false
   },
 

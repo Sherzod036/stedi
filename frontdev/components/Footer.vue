@@ -107,7 +107,7 @@
                 </NuxtLink>
               </li>
               <li class="list__item">
-                <NuxtLink :to="$t('products.product_v1.url')" class="list__link">
+                <NuxtLink :to="$t('all_categories_url')" class="list__link">
                   {{ $t('all_categories') }}
                 </NuxtLink>
               </li>
@@ -135,12 +135,11 @@
         </div>
       </div>
 
-      <div class="row">
-        <div class="col-lg-4 col-xl-4">
-          <a href="#" class="site-map">{{ $t('site_map') }}</a>
-        </div>
+      <div class="bot-row row">
         <div class="col-lg-4 col-xl-4">
           <a href="#" class="catalog-link">{{ $t('download_products') }}</a>
+        </div>
+        <div class="col-lg-4 col-xl-4">
         </div>
         <div class="col-lg-4 col-xl-4">
           <div class="subscribe">

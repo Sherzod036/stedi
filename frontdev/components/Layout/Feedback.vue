@@ -9,7 +9,7 @@
             data-aos-delay="0"
             class="feedback__title title"
           >
-            Свяжитесь с нами
+            {{ $t('feedback.title') }}
           </h2>
           <p
             data-aos="fade-up"
@@ -17,7 +17,7 @@
             data-aos-delay="0"
             class="feedback__desc"
           >
-            Дайте знать, если у вас возникли вопросы.
+            {{ $t('feedback.desc') }}
           </p>
           <form
             class="feedback__form"
@@ -28,33 +28,35 @@
             <input
               type="text"
               class="feedback__input"
-              placeholder="Ваше имя*"
+              :placeholder="$t('feedback.name')"
             />
             <input
               type="text"
               class="feedback__input"
-              placeholder="Ваш e-mail*"
+              :placeholder="$t('feedback.email')"
             />
             <input
               type="text"
               class="feedback__input"
-              placeholder="Название компании"
+              :placeholder="$t('feedback.company')"
             />
             <input
               v-model="formData.phone"
               v-mask="'+998 (##) ###-##-##'"
               type="text"
               class="feedback__input"
-              placeholder="Телефонный номер"
+              :placeholder="$t('feedback.phone')"
             />
-            <textarea class="feedback__textarea" placeholder="Сообщение">
+            <textarea
+              class="feedback__textarea"
+              :placeholder="$t('feedback.message')"
+            >
             </textarea>
             <div class="feedback__inner">
-              <button type="submit" class="feedback__button">Отправить</button>
-              <span class="conf">
-                Нажимая кнопку “Отправить”, вы соглашаетесь <br />
-                <a href="#">с политикой конфиденциальности</a>
-              </span>
+              <button type="submit" class="feedback__button">
+                {{ $t('feedback.button') }}
+              </button>
+              <span class="conf" v-html="$t('feedback.conf')"></span>
             </div>
           </form>
         </div>

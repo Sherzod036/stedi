@@ -101,37 +101,59 @@ export default {
       const allContent = document.querySelectorAll('.page-vacancy__content')
       const allTitle = document.querySelectorAll('.page-vacancy__profession')
       const allIcon = document.querySelectorAll('.page-vacancy__icon')
-      Array.from(allContent).map((i) => {
-        i.classList.add('disabled')
-        i.style.height = '0px'
-        return true
-      })
-      Array.from(allTitle).map((title) => title.classList.remove('active'))
 
-      Array.from(allIcon).map((icon) => {
-        console.log(icon.children)
-        icon.children[1].style.transform = 'rotate(90deg)'
-        return true
-      })
+      const isClick =
+        Array.from(e.target.classList).indexOf('page-vacancy__profession') === 0
 
-      const id = Number(e.target.parentNode.getAttribute('data-id')) - 1
-      const prevEl = e.target.previousElementSibling.children
+      if (isClick) {
+        if (e.target.classList.contains('active')) {
+          Array.from(allTitle).map((title) => title.classList.remove('active'))
+          Array.from(allIcon).map((icon) => {
+            icon.children[1].style.transform = 'rotate(90deg)'
+            return true
+          })
+          Array.from(allContent).map((i) => {
+            i.classList.add('disabled')
+            i.style.height = '0px'
+            return true
+          })
+        } else {
+          Array.from(allContent).map((i) => {
+            i.classList.add('disabled')
+            i.style.height = '0px'
+            return true
+          })
+          Array.from(allTitle).map((title) => title.classList.remove('active'))
 
-      const nextEl = e.target.nextElementSibling
+          Array.from(allIcon).map((icon) => {
+            icon.children[1].style.transform = 'rotate(90deg)'
+            return true
+          })
 
-      this.Hs.map((h, index) => {
-        if (index === id) {
-          e.target.classList.add('active')
+          const id = Number(e.target.parentNode.getAttribute('data-id')) - 1
+          const prevEl = e.target.previousElementSibling.children
 
-          Array.from(prevEl).map((i) => (i.style.transform = 'rotate(0deg)'))
+          const nextEl = e.target.nextElementSibling
 
-          nextEl.style.height = `${h}px`
+          this.Hs.map((h, index) => {
+            if (index === id) {
+              e.target.classList.add('active')
 
-          nextEl.classList.remove('disabled')
+              Array.from(prevEl).map(
+                (i) => (i.style.transform = 'rotate(0deg)')
+              )
+
+              nextEl.style.height = `${h}px`
+
+              nextEl.classList.remove('disabled')
+            }
+
+            return false
+          })
         }
-
+      } else {
         return false
-      })
+      }
     }
   }
 }

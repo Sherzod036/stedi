@@ -11,41 +11,32 @@
           alt=""
         />
       </span>
-
-      <div
-        v-if="category.products.length > 1"
-        class="page-product__link-ids row"
-      >
-        <div
-          v-for="link in category.products"
-          :key="link.id"
-          class="col-md-6 col-lg-3"
-        >
-          <a
-            href="#"
-            class="page-product__link-id"
-            @click.prevent="scrollHandler(link.id)"
-          >
-            {{ link.title }}
-          </a>
+      <div class="row">
+        <div class="col-lg-3">
+          <Navigation :categories="allCat" />
         </div>
-      </div>
-      <div
-        v-for="product in category.products"
-        :id="`product_${product.id}`"
-        :key="product.id"
-        class="product"
-      >
-        <span class="product__title">{{ product.title }}</span>
-        <div class="page-product__block row">
-          <div class="col-lg-6 col-xl-6">
-            <div class="product__left-block" v-html="product.left_block"></div>
-          </div>
-          <div class="col-lg-6 col-xl-6">
-            <div
-              class="product__right-block"
-              v-html="product.right_block"
-            ></div>
+        <div class="col-lg-9">
+          <div
+            v-for="product in category.products"
+            :id="product.slug"
+            :key="product.id"
+            class="product"
+          >
+            <span class="product__title">{{ product.title }}</span>
+            <div class="page-product__block row">
+              <div class="col-lg-6 col-xl-6">
+                <div
+                  class="product__left-block"
+                  v-html="product.left_block"
+                ></div>
+              </div>
+              <div class="col-lg-6 col-xl-6">
+                <div
+                  class="product__right-block"
+                  v-html="product.right_block"
+                ></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -61,10 +52,35 @@
 
 <script>
 export default {
-  async asyncData({ $axios, route }) {
-    const response = await $axios.$get(`/categories/${route.params.slug}`)
+  async asyncData({ $axios, route, i18n }) {
+    let langId = ''
 
-    return { category: response.data }
+    switch (i18n.locale) {
+      case 'ru':
+        langId = 1
+        break
+      case 'uz':
+        langId = 2
+        break
+      case 'en':
+        langId = 3
+        break
+      default:
+        break
+    }
+
+    const config = {
+      headers: {
+        'X-LOCALE': langId
+      }
+    }
+    const response = await $axios.$get(
+      `/categories/${route.params.slug}`,
+      config
+    )
+    const allCat = await $axios.$get('/categories/', config)
+
+    return { category: response.data, allCat: allCat.data }
   },
 
   data() {
@@ -82,12 +98,17 @@ export default {
     }
   },
 
+  mounted() {
+    if (this.$route.query.slug) {
+      this.scrollHandler()
+    }
+    console.log('category', this.category)
+  },
+
   methods: {
-    scrollHandler(id) {
-      const el = document.getElementById(`product_${id}`)
-
+    scrollHandler() {
+      const el = document.getElementById(this.$route.query.slug)
       const posDoc = el.offsetTop - 150
-
       window.scrollTo({
         top: posDoc,
         behavior: 'smooth'

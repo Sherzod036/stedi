@@ -83,6 +83,7 @@ export default {
   benefit4:
     'Doimiy ravishda ishlab chiqarish jarayonlarini takomillashtirib borish, tajribalardan foydalanish va yangi zamonaviy texnologiyalarni ishda qo’llash orqali mahsulotlar sifatini oshirib boramiz.',
   all_categories: 'Barcha kategoriyalar',
+  all_categories_url: '/uz/categories',
   main_location: 'O`zbekiston, Toshkent sh., <br /> A. Qahhor ko`chasi, 9-1 uy',
   otdel: 'Savdo bo`limi',
   site_map: 'Sayt xaritasi',
@@ -115,5 +116,17 @@ export default {
       title: 'Pigmentlar',
       url: '/uz/categories/pigmentlar'
     }
-  }
+  },
+  feedback: {
+    title: "Biz bilan bog'laning",
+    desc: "Agar har qanday savol bo'lsa, xabar bering.",
+    name: 'Sizning ismingiz*',
+    email: 'Sizning e-mail*',
+    company: 'Kompaniya nomi',
+    phone: 'Telefon raqami',
+    message: 'Xabar',
+    button: 'Yuborish',
+    conf: "'Yuborish' tugmasini bosish orqali siz <br /> <a href='#'>maxfiylik siyosati bilan</a>"
+  },
+  techWork: 'Rivojlanish rejimida sayt'
 }

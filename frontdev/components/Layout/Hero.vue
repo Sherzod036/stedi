@@ -1,13 +1,19 @@
 <template>
   <section class="section hero">
     <div class="hero__container container">
-      <div class="hero__block" :class="isLoaded ? 'active' : ''">
-        <h1 class="hero__title">
-          {{ $t('heroBlockText') }}
-        </h1>
+      <div class="hero__blocks">
+        <div class="hero__block" :class="isLoaded ? 'active' : ''">
+          <h1 class="hero__title">
+            {{ $t('heroBlockText') }}
+          </h1>
+        </div>
+        <div
+          class="hero__block_after"
+          :class="isLoadedAfter ? 'active' : ''"
+        ></div>
       </div>
 
-      <div class="scroll-down">
+      <a href="#" class="scroll-down" @click.prevent="scrollDown">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="15"
@@ -22,7 +28,7 @@
             fill="#EC1C2C"
           />
         </svg>
-      </div>
+      </a>
 
       <div class="hero__subscribe">
         <a href="#" target="_blank">
@@ -83,12 +89,27 @@
 <script>
 export default {
   data: () => ({
+    isLoadedAfter: false,
     isLoaded: false
   }),
   mounted() {
     setTimeout(() => {
-      this.isLoaded = true
+      this.isLoadedAfter = true
     }, 1000)
+    setTimeout(() => {
+      this.isLoaded = true
+    }, 1500)
+  },
+  methods: {
+    scrollDown() {
+      const id = document.getElementById('layout_about')
+      const pos = id.offsetTop - 150
+
+      window.scrollTo({
+        top: pos,
+        behavior: 'smooth'
+      })
+    }
   }
 }
 </script>
