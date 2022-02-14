@@ -74,10 +74,7 @@ export default {
         'X-LOCALE': langId
       }
     }
-    const response = await $axios.$get(
-      `/categories/${route.params.slug}`,
-      config
-    )
+    const response = await $axios.$get('/categories/' + route.params.slug)
     const allCat = await $axios.$get('/categories/', config)
 
     return { category: response.data, allCat: allCat.data }
@@ -102,7 +99,6 @@ export default {
     if (this.$route.query.slug) {
       this.scrollHandler()
     }
-    console.log('category', this.category)
   },
 
   methods: {

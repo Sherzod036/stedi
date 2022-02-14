@@ -95,10 +95,10 @@ export default {
   mounted() {
     setTimeout(() => {
       this.isLoadedAfter = true
-    }, 1000)
+    }, 800)
     setTimeout(() => {
       this.isLoaded = true
-    }, 1500)
+    }, 1100)
   },
   methods: {
     scrollDown() {

@@ -28,6 +28,7 @@ export default {
     '~plugins/v-mask.js',
     '~plugins/vue-lazyload.js',
     '~plugins/vuelidate.js',
+    '~plugins/vue-sweetalert2.js',
     { src: '~plugins/aos.js', ssr: false }
   ],
 
@@ -61,10 +62,6 @@ export default {
 
   axios: {
     baseURL: 'https://api.stedi.uz/api',
-    common: {
-      Accept: 'application/json',
-      'Content-Type': 'application/json'
-    },
     debug: false
   },
 

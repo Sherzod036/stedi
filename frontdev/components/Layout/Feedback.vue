@@ -24,6 +24,7 @@
             data-aos="fade-up"
             data-aos-duration="1500"
             data-aos-delay="0"
+            @submit.prevent="sendMail"
           >
             <input
               type="text"
@@ -88,6 +89,14 @@ export default {
         phone: '',
         message: ''
       }
+    }
+  },
+
+  methods: {
+    async sendMail() {
+      const response = await this.$axios.$get('/send-email', this.formData)
+
+      console.log('response', response)
     }
   }
 }

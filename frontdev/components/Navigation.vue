@@ -1,5 +1,5 @@
 <template>
-  <div class="navigations">
+  <div class="navigations" :class="{ fixed: isFixed, invisible: invisible }">
     <div v-for="category in categories" :key="category.id" class="navigation">
       <span class="title" @click="listVisible">
         {{ category.title }}
@@ -24,15 +24,12 @@
       </span>
       <ul class="list">
         <li v-for="product in category.products" :key="product.id" class="item">
-          <NuxtLink
-            :to="{
-              path: `/categories/${category.slug}`,
-              query: { slug: product.slug }
-            }"
+          <a
+            :href="`/categories/${category.slug}?slug=${product.slug}`"
             class="link"
           >
             {{ product.title }}
-          </NuxtLink>
+          </a>
         </li>
       </ul>
     </div>
@@ -47,11 +44,49 @@ export default {
       required: true
     }
   },
-  data: () => ({}),
+  data: () => ({
+    isFixed: false,
+    invisible: false,
+    posNavbar: 0
+  }),
+  mounted() {
+    this.posNavbar = document.querySelector('.navigations').offsetTop
+    window.addEventListener('scroll', this.handleScroll)
+  },
+
+  destroyed() {
+    window.removeEventListener('scroll', this.handleScroll)
+  },
   methods: {
     listVisible(e) {
+      const navs = document.querySelectorAll('.navigation')
+      Array.from(navs).map((nav) => {
+        console.log(nav.children)
+        nav.children[0].children[0].classList.remove('transform')
+        nav.children[1].classList.remove('active')
+        return true
+      })
+
       const list = e.target.nextElementSibling
       list.classList.add('active')
+      e.target.childNodes[1].classList.add('transform')
+    },
+
+    handleScroll() {
+      const conactsOffset = document.querySelector('.feedback').offsetTop
+      if (window.scrollY > this.posNavbar) {
+        this.isFixed = true
+      } else if (window.scrollY < this.posNavbar) {
+        this.isFixed = false
+      } else {
+        this.isFixed = false
+      }
+
+      if (window.scrollY >= conactsOffset - 1200) {
+        this.invisible = true
+      } else {
+        this.invisible = false
+      }
     }
   }
 }
@@ -59,9 +94,18 @@ export default {
 
 <style lang="scss" scoped>
 .navigations {
-  width: 100%;
+  width: 306px;
   background: rgba(246, 246, 246, 0.5);
   padding: 27px 18px;
+  transition: 0.3s;
+  &.fixed {
+    position: fixed;
+    top: 150px;
+  }
+  &.invisible {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 .navigation {
   position: relative;
@@ -86,6 +130,10 @@ export default {
   position: absolute;
   top: 0;
   right: 0;
+  transition: 0.3s;
+  &.transform {
+    transform: rotate(-45deg);
+  }
 }
 .list {
   padding-top: 13px;
@@ -110,6 +158,30 @@ export default {
   transition: 0.3s;
   &:hover {
     color: Red;
+  }
+}
+
+@media (max-width: 1400px) {
+  .navigations {
+    width: 260px;
+  }
+}
+@media (max-width: 1200px) {
+  .navigations {
+    width: 215px;
+  }
+  .title,
+  .link {
+    font-size: 18px;
+  }
+}
+@media (max-width: 992px) {
+  .navigations {
+    width: 100%;
+    position: static !important;
+    opacity: 1;
+    visibility: visible !important;
+    margin-bottom: 35px;
   }
 }
 </style>

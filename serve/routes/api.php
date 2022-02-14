@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\MailController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\Api\CategoryController;
@@ -36,3 +37,9 @@ Route::apiResources([
 ]);
 
 Route::get('/categories/{slug}', [CategoryController::class, 'show']);
+
+/**
+ * Email
+ */
+
+Route::get('/send-email', [MailController::class, 'send_mail']);
